@@ -50,8 +50,12 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
     
     private func userListEventHandler(_ event: UserListEvent) {
         switch event {
-        default:
-            break
+        case .addUser:
+            debugPrint("addUser")
+        case .showUser(let id):
+            debugPrint("showUser \(id)")
+        case .error(let error):
+            debugPrint("error \(error.localizedDescription)")
         }
     }
 }

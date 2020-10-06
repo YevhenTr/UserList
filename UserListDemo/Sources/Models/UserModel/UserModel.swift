@@ -47,6 +47,7 @@ struct UserViewData {
     
     // MARK: - Properties
     
+    let id: String
     let fullName: String
     let email: String
     let photoURL: URL?
@@ -55,6 +56,7 @@ struct UserViewData {
 extension UserViewData {
     
     init(userModel: UserModel) {
+        self.id = userModel.id
         self.fullName = userModel.firstName + " " + userModel.lastName
         self.email = userModel.email
         self.photoURL = URL(string: userModel.imageURL)

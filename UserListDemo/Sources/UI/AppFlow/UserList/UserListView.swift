@@ -34,6 +34,8 @@ class UserListView: BaseView<UserListViewModel> {
     override public func fill(with viewModel: UserListViewModel) {
         super.fill(with: viewModel)
         
+        let tableAdapter = self.tableAdapter
+        
         viewModel.isLoading
             .observeOn(MainScheduler.asyncInstance)
             .bind { debugPrint("isLoading \($0)") }
@@ -41,10 +43,19 @@ class UserListView: BaseView<UserListViewModel> {
         
         viewModel.users
             .observeOn(MainScheduler.asyncInstance)
-            .bind { [weak self] models in
-                self?.tableAdapter?.sections = [Section(cell: UserTableViewCell.self, models: models)]
+            .bind { models in
+                tableAdapter?.sections = [Section(cell: UserTableViewCell.self, models: models)]
             }
             .disposed(by: self)
+        
+        tableAdapter?.eventHandler = { [weak viewModel] event in
+            switch event {
+            case .didSelect(let indexPath):
+                viewModel?.showUser(indexPath: indexPath)
+            default:
+                break
+            }
+        }
         
     }
     

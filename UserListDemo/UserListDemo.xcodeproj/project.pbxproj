@@ -45,6 +45,9 @@
 		629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F4C252C9F4700945A9F /* UserTableViewCell.swift */; };
 		629D9F4F252C9F4700945A9F /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F4D252C9F4700945A9F /* UserTableViewCell.xib */; };
 		629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F50252CB1E800945A9F /* UIView+Extenstions.swift */; };
+		629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F54252CBB3900945A9F /* AppTextConstants.swift */; };
+		629D9F57252CBBC300945A9F /* AppTextConstant+UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */; };
+		629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F59252CBE0A00945A9F /* Array+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +91,9 @@
 		629D9F4C252C9F4700945A9F /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		629D9F4D252C9F4700945A9F /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		629D9F50252CB1E800945A9F /* UIView+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extenstions.swift"; sourceTree = "<group>"; };
+		629D9F54252CBB3900945A9F /* AppTextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextConstants.swift; sourceTree = "<group>"; };
+		629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+UserList.swift"; sourceTree = "<group>"; };
+		629D9F59252CBE0A00945A9F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserListDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F87BA537FC950DEF0E1346 /* Pods-UserListDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.release.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +155,7 @@
 		629D9EEE252C76C900945A9F /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				629D9F52252CBB0E00945A9F /* AppKit */,
 				629D9F2C252C8E8F00945A9F /* Protocols */,
 				629D9F07252C788400945A9F /* Extensions */,
 				629D9EF9252C77A800945A9F /* Utils */,
@@ -258,6 +265,7 @@
 		629D9F07252C788400945A9F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				629D9F58252CBDDF00945A9F /* Foundation */,
 				629D9F08252C789200945A9F /* UIKit */,
 			);
 			path = Extensions;
@@ -397,6 +405,31 @@
 				629D9F4D252C9F4700945A9F /* UserTableViewCell.xib */,
 			);
 			path = Private;
+			sourceTree = "<group>";
+		};
+		629D9F52252CBB0E00945A9F /* AppKit */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F53252CBB1500945A9F /* TextConstants */,
+			);
+			path = AppKit;
+			sourceTree = "<group>";
+		};
+		629D9F53252CBB1500945A9F /* TextConstants */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F54252CBB3900945A9F /* AppTextConstants.swift */,
+				629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */,
+			);
+			path = TextConstants;
+			sourceTree = "<group>";
+		};
+		629D9F58252CBDDF00945A9F /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F59252CBE0A00945A9F /* Array+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		CD9EF3975EBA9432ECC17520 /* Pods */ = {
@@ -550,6 +583,7 @@
 				629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */,
 				629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */,
 				629D9EFC252C77BC00945A9F /* Functions.swift in Sources */,
+				629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */,
 				629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */,
 				629D9F1B252C7B4100945A9F /* UserListView.swift in Sources */,
 				629D9F47252C93B100945A9F /* Networking+AllUsers.swift in Sources */,
@@ -557,11 +591,13 @@
 				629D9EF8252C778B00945A9F /* BaseCoordinator.swift in Sources */,
 				629D9F1A252C7B4100945A9F /* UserListViewController.swift in Sources */,
 				629D9F05252C780300945A9F /* BaseViewController.swift in Sources */,
+				629D9F57252CBBC300945A9F /* AppTextConstant+UserList.swift in Sources */,
 				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
 				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
+				629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */,
 				629D9F31252C8E8F00945A9F /* Hiddable.swift in Sources */,
 				629D9F4A252C957F00945A9F /* UserModel.swift in Sources */,
 				629D9F06252C780300945A9F /* BaseView.swift in Sources */,

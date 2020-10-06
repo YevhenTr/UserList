@@ -11,7 +11,9 @@ import Foundation
 import RxRelay
 
 enum UserListEvent {
-
+    case showUser(id: String)
+    case addUser
+    case error(Error)
 }
 
 class UserListViewModel: BaseViewModel<UserListEvent> {
@@ -47,6 +49,18 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
             }
         }
     }
+    
+    public func showUser(indexPath: IndexPath) {
+        let user = self.users.value.object(at: indexPath.row)
+        
+        if let id = user?.id {
+            self.eventHandler(.showUser(id: id))
+        }
+    }
+    
+    public func addUser() {
+        self.eventHandler(.addUser)
+    }
 
     // MARK: - Private
     
@@ -58,7 +72,7 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     }
     
     private func process(error: Error) {
-        debugPrint(error.localizedDescription)
+        self.eventHandler(.error(error))
     }
 }
 
