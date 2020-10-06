@@ -113,7 +113,14 @@ struct Networking {
                 completion(.failure(ParserError.invalidData))
             }
         } else {
-            completion(.failure(ParserError.missingData))
+            //  some requests don't return data (nil) , only response with status code
+            //  for this type requests can use EmptyModel without any fields
+            //  just specify result model as EmptyModel in request
+            if let emptyResponse = EmptyModel() as? Response {
+                completion(.success(emptyResponse))
+            } else {
+                completion(.failure(ParserError.missingData))
+            }
         }
     }
 }

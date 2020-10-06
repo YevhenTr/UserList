@@ -27,6 +27,29 @@ class AddUserViewModel: BaseViewModel<AddUserEvent> {
     }
     
     // MARK: - Public
+    
+    public func add(newUser: NewUserModel) {
+//        self.networking.add(newUser: model) { result in
+//            switch result {
+//            case .failure(let error):
+//                debugPrint(error)
+//            case .success:
+//                debugPrint("success")
+//            }
+//        }
+        
+        DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
+            debugPrint("error or succes")
+        }
+    }
+    
+    public func validate(name: String?) -> Bool {
+        return true
+    }
+    
+    public func validate(email: String?) -> Bool {
+        return true
+    }
 
     // MARK: - Private
 }

@@ -53,6 +53,10 @@
 		629D9F62252CC23D00945A9F /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */; };
 		629D9F63252CC23D00945A9F /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F5F252CC23D00945A9F /* AddUserViewController.xib */; };
 		629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */; };
+		629D9F67252CC5B100945A9F /* Networking+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F66252CC5B100945A9F /* Networking+AddUser.swift */; };
+		629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F69252CC62400945A9F /* EmptyModel.swift */; };
+		629D9F6C252CC88700945A9F /* EncoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F6B252CC88700945A9F /* EncoderError.swift */; };
+		629D9F6E252CFCA500945A9F /* NewUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F6D252CFCA500945A9F /* NewUserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +108,10 @@
 		629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		629D9F5F252CC23D00945A9F /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
 		629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+AddUser.swift"; sourceTree = "<group>"; };
+		629D9F66252CC5B100945A9F /* Networking+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+AddUser.swift"; sourceTree = "<group>"; };
+		629D9F69252CC62400945A9F /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		629D9F6B252CC88700945A9F /* EncoderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderError.swift; sourceTree = "<group>"; };
+		629D9F6D252CFCA500945A9F /* NewUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewUserModel.swift; sourceTree = "<group>"; };
 		99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserListDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F87BA537FC950DEF0E1346 /* Pods-UserListDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.release.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +194,8 @@
 		629D9EF0252C76D100945A9F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				629D9F6F252CFCAC00945A9F /* NewUserModel */,
+				629D9F68252CC60500945A9F /* EmptyModel */,
 				629D9F48252C957200945A9F /* UserModel */,
 			);
 			path = Models;
@@ -387,6 +397,7 @@
 			children = (
 				629D9F39252C8EA100945A9F /* ParserError.swift */,
 				629D9F3B252C8EA100945A9F /* NetworkError.swift */,
+				629D9F6B252CC88700945A9F /* EncoderError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -397,6 +408,7 @@
 				629D9F44252C930200945A9F /* UserListAPI.swift */,
 				629D9F42252C904500945A9F /* Networking.swift */,
 				629D9F46252C93B100945A9F /* Networking+AllUsers.swift */,
+				629D9F66252CC5B100945A9F /* Networking+AddUser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -453,6 +465,22 @@
 				629D9F5F252CC23D00945A9F /* AddUserViewController.xib */,
 			);
 			path = AddUser;
+			sourceTree = "<group>";
+		};
+		629D9F68252CC60500945A9F /* EmptyModel */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F69252CC62400945A9F /* EmptyModel.swift */,
+			);
+			path = EmptyModel;
+			sourceTree = "<group>";
+		};
+		629D9F6F252CFCAC00945A9F /* NewUserModel */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F6D252CFCA500945A9F /* NewUserModel.swift */,
+			);
+			path = NewUserModel;
 			sourceTree = "<group>";
 		};
 		CD9EF3975EBA9432ECC17520 /* Pods */ = {
@@ -604,14 +632,17 @@
 				629D9F24252C8E3400945A9F /* TableAdapter.swift in Sources */,
 				629D9F2A252C8E3A00945A9F /* SpinnerView.swift in Sources */,
 				629D9F3C252C8EA100945A9F /* ParserError.swift in Sources */,
+				629D9F67252CC5B100945A9F /* Networking+AddUser.swift in Sources */,
 				629D9F45252C930200945A9F /* UserListAPI.swift in Sources */,
 				629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */,
 				629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */,
+				629D9F6E252CFCA500945A9F /* NewUserModel.swift in Sources */,
 				629D9F62252CC23D00945A9F /* AddUserViewModel.swift in Sources */,
 				629D9EFC252C77BC00945A9F /* Functions.swift in Sources */,
 				629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */,
 				629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */,
 				629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */,
+				629D9F6C252CC88700945A9F /* EncoderError.swift in Sources */,
 				629D9F1B252C7B4100945A9F /* UserListView.swift in Sources */,
 				629D9F47252C93B100945A9F /* Networking+AllUsers.swift in Sources */,
 				629D9F33252C8E8F00945A9F /* DisposeBagOwner.swift in Sources */,
@@ -623,6 +654,7 @@
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
 				629D9F61252CC23D00945A9F /* AddUserView.swift in Sources */,
+				629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */,
 				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
 				629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */,

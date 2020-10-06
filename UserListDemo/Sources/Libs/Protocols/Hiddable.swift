@@ -1,6 +1,6 @@
 //
 //  Hiddable.swift
-//  NYTimesViewer
+//  UserListDemo
 //
 //  Created by Yevhen Triukhan on 21.08.2020.
 //  Copyright © 2020 Yevhen Triukhan. All rights reserved.
