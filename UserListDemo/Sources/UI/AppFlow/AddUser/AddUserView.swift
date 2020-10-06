@@ -13,7 +13,27 @@ class AddUserView: BaseView<AddUserViewModel> {
     // MARK: - Subtypes
 
     // MARK: - Properties
-
+    
+    @IBOutlet var contentScrollView: UIScrollView?
+    
+    @IBOutlet var firstNameLabel: UILabel?
+    @IBOutlet var firstNameTextField: UITextField?
+    @IBOutlet var firstNameTooltip: UILabel?
+    
+    @IBOutlet var lastNameLabel: UILabel?
+    @IBOutlet var lastNameTextField: UITextField?
+    @IBOutlet var lastNameTooltip: UILabel?
+    
+    @IBOutlet var emailLabel: UILabel?
+    @IBOutlet var emailTextField: UITextField?
+    @IBOutlet var emailTooltip: UILabel?
+    
+    @IBOutlet var userPhotoLabel: UILabel?
+    @IBOutlet var userPhotoImageView: UIImageView?
+    @IBOutlet var addUserPhotoButton: UIButton?
+    
+    @IBOutlet var addUserButton: UIButton?
+    
     // MARK: - View Lifecycle
     
     override func awakeFromNib() {
