@@ -25,6 +25,18 @@
 		629D9F1B252C7B4100945A9F /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F17252C7B4100945A9F /* UserListView.swift */; };
 		629D9F1C252C7B4100945A9F /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F18252C7B4100945A9F /* UserListViewModel.swift */; };
 		629D9F1D252C7B4100945A9F /* UserListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F19252C7B4100945A9F /* UserListViewController.xib */; };
+		629D9F24252C8E3400945A9F /* TableAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F1F252C8E3400945A9F /* TableAdapter.swift */; };
+		629D9F25252C8E3400945A9F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F21252C8E3400945A9F /* Section.swift */; };
+		629D9F26252C8E3400945A9F /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F23252C8E3400945A9F /* BaseCell.swift */; };
+		629D9F2A252C8E3A00945A9F /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F28252C8E3A00945A9F /* SpinnerView.swift */; };
+		629D9F2B252C8E3A00945A9F /* SpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F29252C8E3A00945A9F /* SpinnerView.xib */; };
+		629D9F31252C8E8F00945A9F /* Hiddable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F2D252C8E8F00945A9F /* Hiddable.swift */; };
+		629D9F33252C8E8F00945A9F /* DisposeBagOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F2F252C8E8F00945A9F /* DisposeBagOwner.swift */; };
+		629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F30252C8E8F00945A9F /* NetworkAPI.swift */; };
+		629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F36252C8E9C00945A9F /* NibDesignable.swift */; };
+		629D9F3C252C8EA100945A9F /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F39252C8EA100945A9F /* ParserError.swift */; };
+		629D9F3E252C8EA100945A9F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F3B252C8EA100945A9F /* NetworkError.swift */; };
+		629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F3F252C8FA200945A9F /* UITableView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +60,18 @@
 		629D9F17252C7B4100945A9F /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		629D9F18252C7B4100945A9F /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		629D9F19252C7B4100945A9F /* UserListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserListViewController.xib; sourceTree = "<group>"; };
+		629D9F1F252C8E3400945A9F /* TableAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableAdapter.swift; sourceTree = "<group>"; };
+		629D9F21252C8E3400945A9F /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		629D9F23252C8E3400945A9F /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		629D9F28252C8E3A00945A9F /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		629D9F29252C8E3A00945A9F /* SpinnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerView.xib; sourceTree = "<group>"; };
+		629D9F2D252C8E8F00945A9F /* Hiddable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hiddable.swift; sourceTree = "<group>"; };
+		629D9F2F252C8E8F00945A9F /* DisposeBagOwner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisposeBagOwner.swift; sourceTree = "<group>"; };
+		629D9F30252C8E8F00945A9F /* NetworkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		629D9F36252C8E9C00945A9F /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
+		629D9F39252C8EA100945A9F /* ParserError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
+		629D9F3B252C8EA100945A9F /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		629D9F3F252C8FA200945A9F /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +128,7 @@
 		629D9EEE252C76C900945A9F /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				629D9F2C252C8E8F00945A9F /* Protocols */,
 				629D9F07252C788400945A9F /* Extensions */,
 				629D9EF9252C77A800945A9F /* Utils */,
 				629D9EF5252C775C00945A9F /* Types */,
@@ -146,6 +171,10 @@
 		629D9EF5252C775C00945A9F /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				629D9F38252C8EA100945A9F /* Errors */,
+				629D9F35252C8E9C00945A9F /* NibDesignable */,
+				629D9F27252C8E3900945A9F /* SpinnerView */,
+				629D9F1E252C8E3400945A9F /* TableAdapter */,
 				629D9F0B252C791100945A9F /* ContainerViewController */,
 				629D9EF6252C776100945A9F /* BaseClasses */,
 			);
@@ -215,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				629D9F09252C78AE00945A9F /* UINavigationController+Extensions.swift */,
+				629D9F3F252C8FA200945A9F /* UITableView+Extensions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -253,6 +283,68 @@
 				629D9F19252C7B4100945A9F /* UserListViewController.xib */,
 			);
 			path = UserList;
+			sourceTree = "<group>";
+		};
+		629D9F1E252C8E3400945A9F /* TableAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F1F252C8E3400945A9F /* TableAdapter.swift */,
+				629D9F20252C8E3400945A9F /* Section */,
+				629D9F22252C8E3400945A9F /* Cell */,
+			);
+			path = TableAdapter;
+			sourceTree = "<group>";
+		};
+		629D9F20252C8E3400945A9F /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F21252C8E3400945A9F /* Section.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		629D9F22252C8E3400945A9F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F23252C8E3400945A9F /* BaseCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		629D9F27252C8E3900945A9F /* SpinnerView */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F28252C8E3A00945A9F /* SpinnerView.swift */,
+				629D9F29252C8E3A00945A9F /* SpinnerView.xib */,
+			);
+			path = SpinnerView;
+			sourceTree = "<group>";
+		};
+		629D9F2C252C8E8F00945A9F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F2D252C8E8F00945A9F /* Hiddable.swift */,
+				629D9F2F252C8E8F00945A9F /* DisposeBagOwner.swift */,
+				629D9F30252C8E8F00945A9F /* NetworkAPI.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		629D9F35252C8E9C00945A9F /* NibDesignable */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F36252C8E9C00945A9F /* NibDesignable.swift */,
+			);
+			path = NibDesignable;
+			sourceTree = "<group>";
+		};
+		629D9F38252C8EA100945A9F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F39252C8EA100945A9F /* ParserError.swift */,
+				629D9F3B252C8EA100945A9F /* NetworkError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +407,7 @@
 			files = (
 				629D9EE6252C75FE00945A9F /* LaunchScreen.storyboard in Resources */,
 				629D9F1D252C7B4100945A9F /* UserListViewController.xib in Resources */,
+				629D9F2B252C8E3A00945A9F /* SpinnerView.xib in Resources */,
 				629D9EE3252C75FE00945A9F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,20 +419,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				629D9F25252C8E3400945A9F /* Section.swift in Sources */,
 				629D9F14252C7AC300945A9F /* AppCoordinator.swift in Sources */,
 				629D9F10252C793800945A9F /* ServiceContainer.swift in Sources */,
 				629D9EDA252C75FB00945A9F /* AppDelegate.swift in Sources */,
+				629D9F26252C8E3400945A9F /* BaseCell.swift in Sources */,
+				629D9F3E252C8EA100945A9F /* NetworkError.swift in Sources */,
 				629D9EF4252C771500945A9F /* RootCoordinator.swift in Sources */,
 				629D9F1C252C7B4100945A9F /* UserListViewModel.swift in Sources */,
 				629D9F0D252C791100945A9F /* ContainerViewController.swift in Sources */,
+				629D9F24252C8E3400945A9F /* TableAdapter.swift in Sources */,
+				629D9F2A252C8E3A00945A9F /* SpinnerView.swift in Sources */,
+				629D9F3C252C8EA100945A9F /* ParserError.swift in Sources */,
 				629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */,
 				629D9EFC252C77BC00945A9F /* Functions.swift in Sources */,
+				629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */,
 				629D9F1B252C7B4100945A9F /* UserListView.swift in Sources */,
+				629D9F33252C8E8F00945A9F /* DisposeBagOwner.swift in Sources */,
 				629D9EF8252C778B00945A9F /* BaseCoordinator.swift in Sources */,
 				629D9F1A252C7B4100945A9F /* UserListViewController.swift in Sources */,
 				629D9F05252C780300945A9F /* BaseViewController.swift in Sources */,
+				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
+				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
+				629D9F31252C8E8F00945A9F /* Hiddable.swift in Sources */,
 				629D9F06252C780300945A9F /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

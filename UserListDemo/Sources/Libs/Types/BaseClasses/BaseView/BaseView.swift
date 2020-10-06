@@ -1,5 +1,5 @@
 //
-//  BaseCoordinator.swift
+//  BaseView.swift
 //  UserListDemo
 //
 //  Created by Yevhen Triukhan on 06.10.2020.
