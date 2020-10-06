@@ -17,6 +17,10 @@ class UserListView: BaseView<UserListViewModel> {
 
     // MARK: - Properties
 
+    @IBOutlet var usersTableView: UITableView?
+    
+    private var tableAdapter: TableAdapter?
+
     // MARK: - View Lifecycle
     
     override func awakeFromNib() {
@@ -35,11 +39,18 @@ class UserListView: BaseView<UserListViewModel> {
             .bind { debugPrint("isLoading \($0)") }
             .disposed(by: self)
         
+        viewModel.users
+            .observeOn(MainScheduler.asyncInstance)
+            .bind { [weak self] models in
+                self?.tableAdapter?.sections = [Section(cell: UserTableViewCell.self, models: models)]
+            }
+            .disposed(by: self)
+        
     }
     
     // MARK: - Private
     
     private func configure() {
-        
+        self.tableAdapter = TableAdapter(table: self.usersTableView, cells: [UserTableViewCell.self])
     }
 }

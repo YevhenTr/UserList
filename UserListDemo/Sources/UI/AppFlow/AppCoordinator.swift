@@ -27,6 +27,8 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
         self.serviceContainer = serviceContainer
         
         super.init(eventHandler: eventHandler)
+        
+        self.navigationController.isNavigationBarHidden = false
     }
     
     // MARK: - Public
@@ -42,7 +44,6 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
         let controller = UserListViewController(viewModel: viewModel)
         
         self.userListViewController = controller
-        self.navigationController.isNavigationBarHidden = false
         
         return controller
     }

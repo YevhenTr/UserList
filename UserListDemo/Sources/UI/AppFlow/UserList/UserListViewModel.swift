@@ -52,6 +52,7 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     
     private func process(model: [UserModel]) {
         debugPrint(model.count)
+        self.users.accept(model)
     }
     
     private func process(error: Error) {

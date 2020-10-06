@@ -16,8 +16,23 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="UserListView" customModule="UserListDemo">
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kdz-rm-rkf">
+                    <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kdz-rm-rkf" secondAttribute="bottom" id="4fC-SY-9Im"/>
+                <constraint firstItem="Kdz-rm-rkf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LP3-aI-Cez"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kdz-rm-rkf" secondAttribute="trailing" id="rcX-tK-mMp"/>
+                <constraint firstItem="Kdz-rm-rkf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yPU-Ib-Pgu"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <connections>
+                <outlet property="usersTableView" destination="Kdz-rm-rkf" id="CPv-Ug-Nkr"/>
+            </connections>
             <point key="canvasLocation" x="132" y="153.69458128078819"/>
         </view>
     </objects>
