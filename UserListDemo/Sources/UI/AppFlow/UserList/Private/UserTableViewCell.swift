@@ -71,7 +71,7 @@ class UserTableViewCell: BaseCell<UserViewData, EmptyCellEvent> {
         self.contentContainerView?
             .set(cornerRadius: Constant.cornerRadius)
             .set(borderWidth: Constant.borderWidth)
-            .set(borderColor: .label)
+            .set(borderColor: .systemFill)
         
         self.userPhotoImageView?
             .set(cornerRadius: Constant.cornerRadius)
