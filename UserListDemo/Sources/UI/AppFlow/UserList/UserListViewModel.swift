@@ -65,7 +65,6 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     // MARK: - Private
     
     private func process(model: [UserModel]) {
-        debugPrint(model.count)
         let userViewData = model.map(UserViewData.init(userModel:))
         
         self.users.accept(userViewData)

@@ -38,7 +38,7 @@ class UserListView: BaseView<UserListViewModel> {
         
         viewModel.isLoading
             .observeOn(MainScheduler.asyncInstance)
-            .bind { debugPrint("isLoading \($0)") }
+            .bind { _ in }
             .disposed(by: self)
         
         viewModel.users
