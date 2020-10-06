@@ -16,7 +16,7 @@ class BaseViewModel<Event>: NSObject {
     
     // MARK: - Init and Deinit
     
-    init(serviceContainer: ServiceContainer? = nil, eventHandler: @escaping Handler<Event>) {
+    init(eventHandler: @escaping Handler<Event>) {
         self.eventHandler = eventHandler
         
         super.init()

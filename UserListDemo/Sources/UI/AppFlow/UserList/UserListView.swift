@@ -8,6 +8,9 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
+
 class UserListView: BaseView<UserListViewModel> {
 
     // MARK: - Subtypes
@@ -26,6 +29,11 @@ class UserListView: BaseView<UserListViewModel> {
 
     override public func fill(with viewModel: UserListViewModel) {
         super.fill(with: viewModel)
+        
+        viewModel.isLoading
+            .observeOn(MainScheduler.asyncInstance)
+            .bind { debugPrint("isLoading \($0)") }
+            .disposed(by: self)
         
     }
     
