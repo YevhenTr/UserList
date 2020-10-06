@@ -51,11 +51,24 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
     private func userListEventHandler(_ event: UserListEvent) {
         switch event {
         case .addUser:
-            debugPrint("addUser")
+            self.push(controller: self.createAddUserViewController())
         case .showUser(let id):
             debugPrint("showUser \(id)")
         case .error(let error):
             debugPrint("error \(error.localizedDescription)")
+        }
+    }
+    
+    private func createAddUserViewController() -> AddUserViewController {
+        let viewModel = AddUserViewModel(serviceContainer: self.serviceContainer, eventHandler: self.addUserEventHandler)
+        let controller = AddUserViewController(viewModel: viewModel)
+        
+        return controller
+    }
+    
+    private func addUserEventHandler(_ event: AddUserEvent) {
+        switch event {
+        
         }
     }
 }

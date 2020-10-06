@@ -48,6 +48,11 @@
 		629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F54252CBB3900945A9F /* AppTextConstants.swift */; };
 		629D9F57252CBBC300945A9F /* AppTextConstant+UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */; };
 		629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F59252CBE0A00945A9F /* Array+Extensions.swift */; };
+		629D9F60252CC23D00945A9F /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5C252CC23D00945A9F /* AddUserViewController.swift */; };
+		629D9F61252CC23D00945A9F /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5D252CC23D00945A9F /* AddUserView.swift */; };
+		629D9F62252CC23D00945A9F /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */; };
+		629D9F63252CC23D00945A9F /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F5F252CC23D00945A9F /* AddUserViewController.xib */; };
+		629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +99,11 @@
 		629D9F54252CBB3900945A9F /* AppTextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextConstants.swift; sourceTree = "<group>"; };
 		629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+UserList.swift"; sourceTree = "<group>"; };
 		629D9F59252CBE0A00945A9F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		629D9F5C252CC23D00945A9F /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		629D9F5D252CC23D00945A9F /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
+		629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		629D9F5F252CC23D00945A9F /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
+		629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+AddUser.swift"; sourceTree = "<group>"; };
 		99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserListDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F87BA537FC950DEF0E1346 /* Pods-UserListDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.release.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -302,6 +312,7 @@
 			children = (
 				629D9F13252C7AC300945A9F /* AppCoordinator.swift */,
 				629D9F15252C7B2A00945A9F /* UserList */,
+				629D9F5B252CC21F00945A9F /* AddUser */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -419,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				629D9F54252CBB3900945A9F /* AppTextConstants.swift */,
+				629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */,
 				629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */,
 			);
 			path = TextConstants;
@@ -430,6 +442,17 @@
 				629D9F59252CBE0A00945A9F /* Array+Extensions.swift */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		629D9F5B252CC21F00945A9F /* AddUser */ = {
+			isa = PBXGroup;
+			children = (
+				629D9F5C252CC23D00945A9F /* AddUserViewController.swift */,
+				629D9F5D252CC23D00945A9F /* AddUserView.swift */,
+				629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */,
+				629D9F5F252CC23D00945A9F /* AddUserViewController.xib */,
+			);
+			path = AddUser;
 			sourceTree = "<group>";
 		};
 		CD9EF3975EBA9432ECC17520 /* Pods */ = {
@@ -514,6 +537,7 @@
 				629D9F2B252C8E3A00945A9F /* SpinnerView.xib in Resources */,
 				629D9EE3252C75FE00945A9F /* Assets.xcassets in Resources */,
 				629D9F4F252C9F4700945A9F /* UserTableViewCell.xib in Resources */,
+				629D9F63252CC23D00945A9F /* AddUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,6 +591,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629D9F25252C8E3400945A9F /* Section.swift in Sources */,
+				629D9F60252CC23D00945A9F /* AddUserViewController.swift in Sources */,
 				629D9F14252C7AC300945A9F /* AppCoordinator.swift in Sources */,
 				629D9F10252C793800945A9F /* ServiceContainer.swift in Sources */,
 				629D9F43252C904600945A9F /* Networking.swift in Sources */,
@@ -582,9 +607,11 @@
 				629D9F45252C930200945A9F /* UserListAPI.swift in Sources */,
 				629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */,
 				629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */,
+				629D9F62252CC23D00945A9F /* AddUserViewModel.swift in Sources */,
 				629D9EFC252C77BC00945A9F /* Functions.swift in Sources */,
 				629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */,
 				629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */,
+				629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */,
 				629D9F1B252C7B4100945A9F /* UserListView.swift in Sources */,
 				629D9F47252C93B100945A9F /* Networking+AllUsers.swift in Sources */,
 				629D9F33252C8E8F00945A9F /* DisposeBagOwner.swift in Sources */,
@@ -595,6 +622,7 @@
 				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
+				629D9F61252CC23D00945A9F /* AddUserView.swift in Sources */,
 				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
 				629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */,
