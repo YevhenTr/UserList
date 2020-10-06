@@ -12,11 +12,11 @@ struct ServiceContainer {
     
     // MARK: - Properties
     
-    
+    let networking: Networking
     
     // MARK: - Init and Deinit
     
     init() {
-
+        self.networking = Networking(api: UserListAPI())
     }
 }
