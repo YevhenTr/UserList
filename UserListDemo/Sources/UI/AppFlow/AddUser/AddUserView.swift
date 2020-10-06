@@ -12,6 +12,13 @@ class AddUserView: BaseView<AddUserViewModel> {
 
     // MARK: - Subtypes
 
+    typealias Text = AppTextConstants.AddUser
+    
+    private enum Constant {
+        static let cornerRadius: CGFloat = 5
+        static let borderWidth: CGFloat = 1
+    }
+    
     // MARK: - Properties
     
     @IBOutlet var contentScrollView: UIScrollView?
@@ -52,6 +59,29 @@ class AddUserView: BaseView<AddUserViewModel> {
     // MARK: - Private
     
     private func configure() {
+        self.firstNameLabel?.text = Text.firstNameTitle
+        self.lastNameLabel?.text = Text.lastNameTitle
+        self.emailLabel?.text = Text.emailTitle
+        self.userPhotoLabel?.text = Text.photoTitle
         
+        [
+            self.firstNameTooltip,
+            self.lastNameTooltip,
+            self.emailTooltip,
+        ]
+            .forEach { $0?.text = nil }
+        
+        self.userPhotoImageView?.image = UIImage(named: "userphoto_placeholder_image")
+        
+        self.addUserPhotoButton?
+            .set(cornerRadius: Constant.cornerRadius)
+            .set(borderColor: .systemBlue)
+            .set(borderWidth: Constant.borderWidth)
+            .setTitle(Text.photoButton, for: .normal)
+        
+
+        self.addUserButton?
+            .set(cornerRadius: Constant.cornerRadius)
+            .setTitle(Text.addUserButton, for: .normal)
     }
 }

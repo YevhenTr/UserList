@@ -13,5 +13,13 @@ extension AppTextConstants {
     enum AddUser {
         
         static let navigationTitle = "User Info"
+        
+        static let firstNameTitle = "First Name"
+        static let lastNameTitle = "Last Name"
+        static let emailTitle = "Email"
+        static let photoTitle = "Photo"
+
+        static let photoButton = "Add Photo"
+        static let addUserButton = "Add User"
     }
 }
