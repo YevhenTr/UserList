@@ -18,7 +18,7 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
 
     // MARK: - Properties
     
-    public let users = BehaviorRelay<[UserModel]>(value: [])
+    public let users = BehaviorRelay<[UserViewData]>(value: [])
     public let isLoading = BehaviorRelay<Bool>(value: false)
     
     private let networking: Networking
@@ -52,7 +52,9 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     
     private func process(model: [UserModel]) {
         debugPrint(model.count)
-        self.users.accept(model)
+        let userViewData = model.map(UserViewData.init(userModel:))
+        
+        self.users.accept(userViewData)
     }
     
     private func process(error: Error) {

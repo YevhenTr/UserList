@@ -44,6 +44,7 @@
 		629D9F4A252C957F00945A9F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F49252C957F00945A9F /* UserModel.swift */; };
 		629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F4C252C9F4700945A9F /* UserTableViewCell.swift */; };
 		629D9F4F252C9F4700945A9F /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F4D252C9F4700945A9F /* UserTableViewCell.xib */; };
+		629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F50252CB1E800945A9F /* UIView+Extenstions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		629D9F49252C957F00945A9F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		629D9F4C252C9F4700945A9F /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		629D9F4D252C9F4700945A9F /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		629D9F50252CB1E800945A9F /* UIView+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extenstions.swift"; sourceTree = "<group>"; };
 		99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserListDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F87BA537FC950DEF0E1346 /* Pods-UserListDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.release.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -266,6 +268,7 @@
 			children = (
 				629D9F09252C78AE00945A9F /* UINavigationController+Extensions.swift */,
 				629D9F3F252C8FA200945A9F /* UITableView+Extensions.swift */,
+				629D9F50252CB1E800945A9F /* UIView+Extenstions.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
+				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
 				629D9F31252C8E8F00945A9F /* Hiddable.swift in Sources */,
 				629D9F4A252C957F00945A9F /* UserModel.swift in Sources */,

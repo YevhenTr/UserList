@@ -32,8 +32,6 @@ struct UserModel: Codable {
         case lastName = "last_name"
         case email
         case imageURL = "image_url"
-        case createdAtString = "created"
-        case updatedAtString = "updated"
     }
     
     // MARK: - Properties
@@ -43,6 +41,22 @@ struct UserModel: Codable {
     let lastName: String
     let email: String
     let imageURL: String
-    let createdAtString: String
-    let updatedAtString: String    
+}
+
+struct UserViewData {
+    
+    // MARK: - Properties
+    
+    let fullName: String
+    let email: String
+    let photoURL: URL?
+}
+
+extension UserViewData {
+    
+    init(userModel: UserModel) {
+        self.fullName = userModel.firstName + " " + userModel.lastName
+        self.email = userModel.email
+        self.photoURL = URL(string: userModel.imageURL)
+    }
 }
