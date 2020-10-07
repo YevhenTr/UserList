@@ -41,6 +41,12 @@ class AddUserView: BaseView<AddUserViewModel> {
     
     @IBOutlet var addUserButton: UIButton?
     
+    private lazy var bottomInset = UIApplication.shared.windows
+        .filter {$0.isKeyWindow}
+        .first?
+        .safeAreaInsets.bottom
+        ?? 0
+    
     // MARK: - View Lifecycle
     
     override func awakeFromNib() {
@@ -54,11 +60,26 @@ class AddUserView: BaseView<AddUserViewModel> {
     override public func fill(with viewModel: AddUserViewModel) {
         super.fill(with: viewModel)
         
+        let bottomInset = self.bottomInset
+        let scrollView = self.contentScrollView
+        
+        viewModel.keyboardNotificationService.eventHandler = { [weak self] event in
+            switch event {
+            case .hidden:
+                scrollView?.contentInset = .zero
+            case .visible(let endFrame, _):
+                scrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: endFrame.height - bottomInset, right: 0)
+            }
+        
+            self?.layoutIfNeeded()
+        }
     }
     
     // MARK: - Private
     
     private func configure() {
+        self.addHideKeyboardGeasture()
+        
         self.firstNameLabel?.text = Text.firstNameTitle
         self.lastNameLabel?.text = Text.lastNameTitle
         self.emailLabel?.text = Text.emailTitle
@@ -69,7 +90,7 @@ class AddUserView: BaseView<AddUserViewModel> {
             self.lastNameTooltip,
             self.emailTooltip,
         ]
-            .forEach { $0?.text = nil }
+            .forEach { $0?.text = " " }
         
         self.userPhotoImageView?.image = UIImage(named: "userphoto_placeholder_image")
         

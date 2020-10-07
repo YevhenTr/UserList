@@ -13,10 +13,12 @@ struct ServiceContainer {
     // MARK: - Properties
     
     let networking: Networking
+    let keyboardNotificationService: KeyboardNotificationsService
     
     // MARK: - Init and Deinit
     
     init() {
         self.networking = Networking(api: UserListAPI())
+        self.keyboardNotificationService = KeyboardNotificationsService()
     }
 }

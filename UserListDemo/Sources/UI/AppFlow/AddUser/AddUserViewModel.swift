@@ -16,12 +16,15 @@ class AddUserViewModel: BaseViewModel<AddUserEvent> {
 
     // MARK: - Properties
     
+    public let keyboardNotificationService: KeyboardNotificationsService
+
     private let networking: Networking
     
     // MARK: - Init and Deinit
     
     init(serviceContainer: ServiceContainer, eventHandler: @escaping Handler<AddUserEvent>) {
         self.networking = serviceContainer.networking
+        self.keyboardNotificationService = serviceContainer.keyboardNotificationService
         
         super.init(eventHandler: eventHandler)
     }
