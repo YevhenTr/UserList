@@ -22,19 +22,11 @@ class AddUserView: BaseView<AddUserViewModel> {
     // MARK: - Properties
     
     @IBOutlet var contentScrollView: UIScrollView?
-    
-    @IBOutlet var firstNameLabel: UILabel?
-    @IBOutlet var firstNameTextField: UITextField?
-    @IBOutlet var firstNameTooltip: UILabel?
-    
-    @IBOutlet var lastNameLabel: UILabel?
-    @IBOutlet var lastNameTextField: UITextField?
-    @IBOutlet var lastNameTooltip: UILabel?
-    
-    @IBOutlet var emailLabel: UILabel?
-    @IBOutlet var emailTextField: UITextField?
-    @IBOutlet var emailTooltip: UILabel?
-    
+
+    @IBOutlet var firstNameInputView: NameInputView?
+    @IBOutlet var lastNameInputView: NameInputView?
+    @IBOutlet var emailNameInputView: EmailInputView?
+
     @IBOutlet var userPhotoLabel: UILabel?
     @IBOutlet var userPhotoImageView: UIImageView?
     @IBOutlet var addUserPhotoButton: UIButton?
@@ -61,8 +53,6 @@ class AddUserView: BaseView<AddUserViewModel> {
         super.fill(with: viewModel)
         
         self.bindKeyboardService(with: viewModel)
-
-        self.bindInputFields(with: viewModel)
     }
     
     // MARK: - Private
@@ -70,17 +60,11 @@ class AddUserView: BaseView<AddUserViewModel> {
     private func configure() {
         self.addHideKeyboardGeasture()
         
-        self.firstNameLabel?.text = Text.firstNameTitle
-        self.lastNameLabel?.text = Text.lastNameTitle
-        self.emailLabel?.text = Text.emailTitle
-        self.userPhotoLabel?.text = Text.photoTitle
+        self.firstNameInputView?.titleText = Text.firstNameTitle
+        self.lastNameInputView?.titleText = Text.lastNameTitle
+        self.emailNameInputView?.titleText = Text.emailTitle
         
-        [
-            self.firstNameTooltip,
-            self.lastNameTooltip,
-            self.emailTooltip,
-        ]
-            .forEach { $0?.text = " " }
+        self.userPhotoLabel?.text = Text.photoTitle
         
         self.userPhotoImageView?.image = UIImage(named: "userphoto_placeholder_image")
         
@@ -89,7 +73,6 @@ class AddUserView: BaseView<AddUserViewModel> {
             .set(borderColor: .systemBlue)
             .set(borderWidth: Constant.borderWidth)
             .setTitle(Text.photoButton, for: .normal)
-        
 
         self.addUserButton?
             .set(cornerRadius: Constant.cornerRadius)
@@ -110,39 +93,5 @@ class AddUserView: BaseView<AddUserViewModel> {
         
             self?.layoutIfNeeded()
         }
-    }
-    
-    private func bindInputFields(with viewModel: AddUserViewModel) {
-        let firstNameField = self.firstNameTextField
-        let firstNameTooltip = self.firstNameTooltip
-        
-        let lastNameField = self.lastNameTextField
-        let lastNameTooltip = self.lastNameTooltip
-        
-        let emailField = self.emailTextField
-        let emailTooltip = self.emailTooltip
-        
-        weak var weakViewModel = viewModel
-        
-        firstNameField?.rx
-            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
-            .bind {
-                firstNameTooltip?.text = weakViewModel?.validate(name: firstNameField?.text) == false ? "not valid" : ""
-            }
-            .disposed(by: self)
-        
-        lastNameField?.rx
-            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
-            .bind {
-                lastNameTooltip?.text = weakViewModel?.validate(name: lastNameField?.text) == false ? "not valid" : ""
-            }
-            .disposed(by: self)
-        
-        emailField?.rx
-            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
-            .bind {
-                emailTooltip?.text = weakViewModel?.validate(email: emailField?.text) == false ? "not valid" : ""
-            }
-            .disposed(by: self)
     }
 }
