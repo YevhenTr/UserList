@@ -101,7 +101,7 @@
                                                 <constraint firstAttribute="height" constant="1" id="1Cg-xg-zhx"/>
                                             </constraints>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-Tg-Hul">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-Tg-Hul" customClass="CustomButton" customModule="UserListDemo" customModuleProvider="target">
                                             <rect key="frame" x="26" y="610.33333333333337" width="323" height="33"/>
                                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -152,7 +152,7 @@
                 <outlet property="addUserButton" destination="Pye-Tg-Hul" id="FHg-0B-dof"/>
                 <outlet property="addUserPhotoButton" destination="4SK-EL-YS6" id="IDb-C3-aAL"/>
                 <outlet property="contentScrollView" destination="YMG-UX-Beq" id="9II-PM-HQ9"/>
-                <outlet property="emailNameInputView" destination="zdy-Hz-nLA" id="3HX-8c-Wfm"/>
+                <outlet property="emailInputView" destination="zdy-Hz-nLA" id="3HX-8c-Wfm"/>
                 <outlet property="firstNameInputView" destination="RcS-f1-6J3" id="CIx-f9-h2m"/>
                 <outlet property="lastNameInputView" destination="JFF-q7-UiD" id="YJP-ZR-B1k"/>
                 <outlet property="userPhotoImageView" destination="nVW-y8-uBh" id="4RS-Jz-C0k"/>

@@ -18,7 +18,8 @@ class InputView: UIView {
     public let inputFieldView = FieldView(frame: .zero)
     
     public let isValid = BehaviorRelay<Bool>(value: true)
-    
+    public let isEmpty = BehaviorRelay<Bool>(value: true)
+
     public var validator: ValidatorType = Validator()
     
     public lazy var titleLabel = self.inputFieldView.titleLabel
@@ -90,12 +91,19 @@ class InputView: UIView {
         weak var weakSelf = self
         
         inputField?.rx
-            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
+            .text.orEmpty
+            .bind { text in
+                weakSelf?.isEmpty.accept(text.isEmpty)
+            }
+            .disposed(by: self)
+
+        
+        inputField?.rx
+            .controlEvent([.editingChanged, .editingDidEndOnExit, .editingDidEnd])
             .bind {
                 guard let text = inputField?.text else { return }
-                
                 let errorMessage = validator.check(text: text, with: rules)
-                
+
                 weakSelf?.isValid.accept(errorMessage == nil)
                 weakSelf?.tooltipLabel?.text = errorMessage
             }

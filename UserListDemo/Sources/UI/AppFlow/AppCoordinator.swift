@@ -68,7 +68,10 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
     
     private func addUserEventHandler(_ event: AddUserEvent) {
         switch event {
-        
+        case .error(let error):
+            debugPrint(error.localizedDescription)
+        case .back:
+            self.pop()
         }
     }
 }

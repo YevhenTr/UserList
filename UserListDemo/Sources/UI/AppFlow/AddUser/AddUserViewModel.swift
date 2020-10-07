@@ -9,7 +9,8 @@
 import Foundation
 
 enum AddUserEvent {
-
+    case back
+    case error(Error)
 }
 
 class AddUserViewModel: BaseViewModel<AddUserEvent> {
@@ -32,18 +33,26 @@ class AddUserViewModel: BaseViewModel<AddUserEvent> {
     // MARK: - Public
     
     public func add(newUser: NewUserModel) {
-//        self.networking.add(newUser: model) { result in
+//        self.networking.add(newUser: newUser) { [weak self] result in
 //            switch result {
 //            case .failure(let error):
-//                debugPrint(error)
+//                self?.eventHandler(.error(error))
 //            case .success:
-//                debugPrint("success")
+//                self?.eventHandler(.back)
 //            }
 //        }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
-            debugPrint("error or succes")
+            debugPrint("error or succes with newUser \(newUser.user.firstName)")
+            
+            DispatchQueue.main.async {
+                self.eventHandler(.back)
+            }
         }
+    }
+    
+    public func show(error: Error) {
+        self.eventHandler(.error(error))
     }
     
     // MARK: - Private
