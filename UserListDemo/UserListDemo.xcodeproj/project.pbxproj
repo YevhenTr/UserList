@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B14F39403EB560F03DD7EEC /* Pods_UserListDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */; };
+		624F0775252E1D0200805469 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F0774252E1D0200805469 /* Validator.swift */; };
+		624F0778252E1D6700805469 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */; };
 		6266C36E252DA00800D95BE3 /* KeyboardNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266C36D252DA00800D95BE3 /* KeyboardNotificationService.swift */; };
 		629D9EDA252C75FB00945A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9ED9252C75FB00945A9F /* AppDelegate.swift */; };
 		629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9EDB252C75FB00945A9F /* SceneDelegate.swift */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		5B9412A8C41D970F3D6181F9 /* Pods-UserListDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.debug.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		624F0774252E1D0200805469 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		6266C36D252DA00800D95BE3 /* KeyboardNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationService.swift; sourceTree = "<group>"; };
 		629D9ED6252C75FB00945A9F /* UserListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629D9ED9252C75FB00945A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +134,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		624F0772252E1CEA00805469 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				624F0774252E1D0200805469 /* Validator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 		6266C36C252D9FEE00D95BE3 /* KeyboardNotificationService */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +244,7 @@
 		629D9EF5252C775C00945A9F /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				624F0772252E1CEA00805469 /* Validator */,
 				629D9F38252C8EA100945A9F /* Errors */,
 				629D9F35252C8E9C00945A9F /* NibDesignable */,
 				629D9F27252C8E3900945A9F /* SpinnerView */,
@@ -463,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				629D9F59252CBE0A00945A9F /* Array+Extensions.swift */,
+				624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -661,11 +675,13 @@
 				629D9F1A252C7B4100945A9F /* UserListViewController.swift in Sources */,
 				629D9F05252C780300945A9F /* BaseViewController.swift in Sources */,
 				629D9F57252CBBC300945A9F /* AppTextConstant+UserList.swift in Sources */,
+				624F0778252E1D6700805469 /* CharacterSet+Extensions.swift in Sources */,
 				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
 				629D9F61252CC23D00945A9F /* AddUserView.swift in Sources */,
 				629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */,
+				624F0775252E1D0200805469 /* Validator.swift in Sources */,
 				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
 				629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */,

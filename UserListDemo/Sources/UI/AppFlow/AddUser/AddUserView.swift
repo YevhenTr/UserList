@@ -60,19 +60,9 @@ class AddUserView: BaseView<AddUserViewModel> {
     override public func fill(with viewModel: AddUserViewModel) {
         super.fill(with: viewModel)
         
-        let bottomInset = self.bottomInset
-        let scrollView = self.contentScrollView
-        
-        viewModel.keyboardNotificationService.eventHandler = { [weak self] event in
-            switch event {
-            case .hidden:
-                scrollView?.contentInset = .zero
-            case .visible(let endFrame, _):
-                scrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: endFrame.height - bottomInset, right: 0)
-            }
-        
-            self?.layoutIfNeeded()
-        }
+        self.bindKeyboardService(with: viewModel)
+
+        self.bindInputFields(with: viewModel)
     }
     
     // MARK: - Private
@@ -104,5 +94,55 @@ class AddUserView: BaseView<AddUserViewModel> {
         self.addUserButton?
             .set(cornerRadius: Constant.cornerRadius)
             .setTitle(Text.addUserButton, for: .normal)
+    }
+    
+    private func bindKeyboardService(with viewModel: AddUserViewModel) {
+        let bottomInset = self.bottomInset
+        let scrollView = self.contentScrollView
+        
+        viewModel.keyboardNotificationService.eventHandler = { [weak self] event in
+            switch event {
+            case .hidden:
+                scrollView?.contentInset = .zero
+            case .visible(let endFrame, _):
+                scrollView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: endFrame.height - bottomInset, right: 0)
+            }
+        
+            self?.layoutIfNeeded()
+        }
+    }
+    
+    private func bindInputFields(with viewModel: AddUserViewModel) {
+        let firstNameField = self.firstNameTextField
+        let firstNameTooltip = self.firstNameTooltip
+        
+        let lastNameField = self.lastNameTextField
+        let lastNameTooltip = self.lastNameTooltip
+        
+        let emailField = self.emailTextField
+        let emailTooltip = self.emailTooltip
+        
+        weak var weakViewModel = viewModel
+        
+        firstNameField?.rx
+            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
+            .bind {
+                firstNameTooltip?.text = weakViewModel?.validate(name: firstNameField?.text) == false ? "not valid" : ""
+            }
+            .disposed(by: self)
+        
+        lastNameField?.rx
+            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
+            .bind {
+                lastNameTooltip?.text = weakViewModel?.validate(name: lastNameField?.text) == false ? "not valid" : ""
+            }
+            .disposed(by: self)
+        
+        emailField?.rx
+            .controlEvent([.editingDidEndOnExit, .editingDidEnd])
+            .bind {
+                emailTooltip?.text = weakViewModel?.validate(email: emailField?.text) == false ? "not valid" : ""
+            }
+            .disposed(by: self)
     }
 }

@@ -47,11 +47,15 @@ class AddUserViewModel: BaseViewModel<AddUserEvent> {
     }
     
     public func validate(name: String?) -> Bool {
-        return true
+        guard let name = name else { return false }
+                
+        return Validator.validate(text: name, with: [.notEmpty,.inRange, .onlyLetters]) == nil
     }
     
     public func validate(email: String?) -> Bool {
-        return true
+        guard let email = email else { return false }
+                
+        return Validator.validate(text: email, with: [.notEmpty, .email]) == nil
     }
 
     // MARK: - Private
