@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1B14F39403EB560F03DD7EEC /* Pods_UserListDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */; };
 		622F679C252E74A600EA7C2A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F679B252E74A600EA7C2A /* CustomButton.swift */; };
+		622F67A3252F09CB00EA7C2A /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F679F252F09CB00EA7C2A /* EditUserViewController.swift */; };
+		622F67A4252F09CB00EA7C2A /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F67A0252F09CB00EA7C2A /* EditUserView.swift */; };
+		622F67A5252F09CB00EA7C2A /* EditUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */; };
+		622F67A6252F09CB00EA7C2A /* EditUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 622F67A2252F09CB00EA7C2A /* EditUserViewController.xib */; };
 		624F0775252E1D0200805469 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F0774252E1D0200805469 /* Validator.swift */; };
 		624F0778252E1D6700805469 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */; };
 		624F0780252E208700805469 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F077E252E208700805469 /* FieldView.swift */; };
@@ -71,6 +75,10 @@
 /* Begin PBXFileReference section */
 		5B9412A8C41D970F3D6181F9 /* Pods-UserListDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.debug.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		622F679B252E74A600EA7C2A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		622F679F252F09CB00EA7C2A /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		622F67A0252F09CB00EA7C2A /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
+		622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewModel.swift; sourceTree = "<group>"; };
+		622F67A2252F09CB00EA7C2A /* EditUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditUserViewController.xib; sourceTree = "<group>"; };
 		624F0774252E1D0200805469 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		624F077E252E208700805469 /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
@@ -152,6 +160,17 @@
 				622F679B252E74A600EA7C2A /* CustomButton.swift */,
 			);
 			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		622F679D252F092100EA7C2A /* EditUser */ = {
+			isa = PBXGroup;
+			children = (
+				622F679F252F09CB00EA7C2A /* EditUserViewController.swift */,
+				622F67A0252F09CB00EA7C2A /* EditUserView.swift */,
+				622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */,
+				622F67A2252F09CB00EA7C2A /* EditUserViewController.xib */,
+			);
+			path = EditUser;
 			sourceTree = "<group>";
 		};
 		624F0772252E1CEA00805469 /* Validator */ = {
@@ -396,6 +415,7 @@
 				629D9F13252C7AC300945A9F /* AppCoordinator.swift */,
 				629D9F15252C7B2A00945A9F /* UserList */,
 				629D9F5B252CC21F00945A9F /* AddUser */,
+				622F679D252F092100EA7C2A /* EditUser */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -642,6 +662,7 @@
 				629D9F4F252C9F4700945A9F /* UserTableViewCell.xib in Resources */,
 				629D9F63252CC23D00945A9F /* AddUserViewController.xib in Resources */,
 				624F0781252E208700805469 /* FieldView.xib in Resources */,
+				622F67A6252F09CB00EA7C2A /* EditUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,12 +720,15 @@
 				629D9F14252C7AC300945A9F /* AppCoordinator.swift in Sources */,
 				629D9F10252C793800945A9F /* ServiceContainer.swift in Sources */,
 				629D9F43252C904600945A9F /* Networking.swift in Sources */,
+				622F67A5252F09CB00EA7C2A /* EditUserViewModel.swift in Sources */,
 				629D9EDA252C75FB00945A9F /* AppDelegate.swift in Sources */,
 				629D9F26252C8E3400945A9F /* BaseCell.swift in Sources */,
 				629D9F3E252C8EA100945A9F /* NetworkError.swift in Sources */,
 				629D9EF4252C771500945A9F /* RootCoordinator.swift in Sources */,
+				622F67A4252F09CB00EA7C2A /* EditUserView.swift in Sources */,
 				629D9F1C252C7B4100945A9F /* UserListViewModel.swift in Sources */,
 				624F078D252E52F100805469 /* EmailInputView.swift in Sources */,
+				622F67A3252F09CB00EA7C2A /* EditUserViewController.swift in Sources */,
 				629D9F0D252C791100945A9F /* ContainerViewController.swift in Sources */,
 				629D9F24252C8E3400945A9F /* TableAdapter.swift in Sources */,
 				629D9F2A252C8E3A00945A9F /* SpinnerView.swift in Sources */,
