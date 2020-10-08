@@ -60,35 +60,26 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
         }
     }
     
-    private func createAddUserViewController() -> AddUserViewController {
-        let viewModel = AddUserViewModel(serviceContainer: self.serviceContainer, eventHandler: self.addUserEventHandler)
-        let controller = AddUserViewController(viewModel: viewModel)
+    private func createAddUserViewController() -> InputFormViewController {
+        let viewModel = AddUserViewModel(serviceContainer: self.serviceContainer, eventHandler: self.inputFormEventHandler)
+        let controller = InputFormViewController(viewModel: viewModel)
         
         return controller
     }
     
-    private func addUserEventHandler(_ event: AddUserEvent) {
+    private func createEditUserViewController() -> InputFormViewController {
+        let viewModel = EditUserViewModel(serviceContainer: self.serviceContainer, eventHandler: self.inputFormEventHandler)
+        let controller = InputFormViewController(viewModel: viewModel)
+
+        return controller
+    }
+    
+    private func inputFormEventHandler(_ event: InputFormEvent) {
         switch event {
         case .error(let error):
             debugPrint(error.localizedDescription)
         case .back:
             self.pop()
-        }
-    }
-    
-    private func createEditUserViewController() -> EditUserViewController {
-        let viewModel = EditUserViewModel(serviceContainer: self.serviceContainer, eventHandler: self.editUserEventHandler)
-        let controller = EditUserViewController(viewModel: viewModel)
-        
-        return controller
-    }
-    
-    private func editUserEventHandler(_ event: EditUserEvent) {
-        switch event {
-//        case .error(let error):
-//            debugPrint(error.localizedDescription)
-//        case .back:
-//            self.pop()
         }
     }
 }

@@ -9,10 +9,9 @@
 /* Begin PBXBuildFile section */
 		1B14F39403EB560F03DD7EEC /* Pods_UserListDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E1D7AA46F7A699EB5E10CE /* Pods_UserListDemo.framework */; };
 		622F679C252E74A600EA7C2A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F679B252E74A600EA7C2A /* CustomButton.swift */; };
-		622F67A3252F09CB00EA7C2A /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F679F252F09CB00EA7C2A /* EditUserViewController.swift */; };
-		622F67A4252F09CB00EA7C2A /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F67A0252F09CB00EA7C2A /* EditUserView.swift */; };
 		622F67A5252F09CB00EA7C2A /* EditUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */; };
-		622F67A6252F09CB00EA7C2A /* EditUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 622F67A2252F09CB00EA7C2A /* EditUserViewController.xib */; };
+		6248820D252F4CFF00677FC3 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6248820C252F4CFF00677FC3 /* AddUserViewModel.swift */; };
+		6248820F252F526F00677FC3 /* Networking+EditUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6248820E252F526F00677FC3 /* Networking+EditUser.swift */; };
 		624F0775252E1D0200805469 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F0774252E1D0200805469 /* Validator.swift */; };
 		624F0778252E1D6700805469 /* CharacterSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */; };
 		624F0780252E208700805469 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F077E252E208700805469 /* FieldView.swift */; };
@@ -61,10 +60,10 @@
 		629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F54252CBB3900945A9F /* AppTextConstants.swift */; };
 		629D9F57252CBBC300945A9F /* AppTextConstant+UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */; };
 		629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F59252CBE0A00945A9F /* Array+Extensions.swift */; };
-		629D9F60252CC23D00945A9F /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5C252CC23D00945A9F /* AddUserViewController.swift */; };
-		629D9F61252CC23D00945A9F /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5D252CC23D00945A9F /* AddUserView.swift */; };
-		629D9F62252CC23D00945A9F /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */; };
-		629D9F63252CC23D00945A9F /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F5F252CC23D00945A9F /* AddUserViewController.xib */; };
+		629D9F60252CC23D00945A9F /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5C252CC23D00945A9F /* InputFormViewController.swift */; };
+		629D9F61252CC23D00945A9F /* ImportFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5D252CC23D00945A9F /* ImportFormView.swift */; };
+		629D9F62252CC23D00945A9F /* InputFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */; };
+		629D9F63252CC23D00945A9F /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F5F252CC23D00945A9F /* InputFormViewController.xib */; };
 		629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */; };
 		629D9F67252CC5B100945A9F /* Networking+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F66252CC5B100945A9F /* Networking+AddUser.swift */; };
 		629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F69252CC62400945A9F /* EmptyModel.swift */; };
@@ -75,10 +74,9 @@
 /* Begin PBXFileReference section */
 		5B9412A8C41D970F3D6181F9 /* Pods-UserListDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserListDemo.debug.xcconfig"; path = "Target Support Files/Pods-UserListDemo/Pods-UserListDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		622F679B252E74A600EA7C2A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		622F679F252F09CB00EA7C2A /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
-		622F67A0252F09CB00EA7C2A /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewModel.swift; sourceTree = "<group>"; };
-		622F67A2252F09CB00EA7C2A /* EditUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditUserViewController.xib; sourceTree = "<group>"; };
+		6248820C252F4CFF00677FC3 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		6248820E252F526F00677FC3 /* Networking+EditUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+EditUser.swift"; sourceTree = "<group>"; };
 		624F0774252E1D0200805469 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		624F0777252E1D6700805469 /* CharacterSet+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extensions.swift"; sourceTree = "<group>"; };
 		624F077E252E208700805469 /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldView.swift; sourceTree = "<group>"; };
@@ -129,10 +127,10 @@
 		629D9F54252CBB3900945A9F /* AppTextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextConstants.swift; sourceTree = "<group>"; };
 		629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+UserList.swift"; sourceTree = "<group>"; };
 		629D9F59252CBE0A00945A9F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		629D9F5C252CC23D00945A9F /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
-		629D9F5D252CC23D00945A9F /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
-		629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
-		629D9F5F252CC23D00945A9F /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
+		629D9F5C252CC23D00945A9F /* InputFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
+		629D9F5D252CC23D00945A9F /* ImportFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFormView.swift; sourceTree = "<group>"; };
+		629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewModel.swift; sourceTree = "<group>"; };
+		629D9F5F252CC23D00945A9F /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
 		629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+AddUser.swift"; sourceTree = "<group>"; };
 		629D9F66252CC5B100945A9F /* Networking+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+AddUser.swift"; sourceTree = "<group>"; };
 		629D9F69252CC62400945A9F /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
@@ -160,17 +158,6 @@
 				622F679B252E74A600EA7C2A /* CustomButton.swift */,
 			);
 			path = CustomButton;
-			sourceTree = "<group>";
-		};
-		622F679D252F092100EA7C2A /* EditUser */ = {
-			isa = PBXGroup;
-			children = (
-				622F679F252F09CB00EA7C2A /* EditUserViewController.swift */,
-				622F67A0252F09CB00EA7C2A /* EditUserView.swift */,
-				622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */,
-				622F67A2252F09CB00EA7C2A /* EditUserViewController.xib */,
-			);
-			path = EditUser;
 			sourceTree = "<group>";
 		};
 		624F0772252E1CEA00805469 /* Validator */ = {
@@ -414,8 +401,7 @@
 			children = (
 				629D9F13252C7AC300945A9F /* AppCoordinator.swift */,
 				629D9F15252C7B2A00945A9F /* UserList */,
-				629D9F5B252CC21F00945A9F /* AddUser */,
-				622F679D252F092100EA7C2A /* EditUser */,
+				629D9F5B252CC21F00945A9F /* AddOrEditUser */,
 			);
 			path = AppFlow;
 			sourceTree = "<group>";
@@ -502,6 +488,7 @@
 				629D9F42252C904500945A9F /* Networking.swift */,
 				629D9F46252C93B100945A9F /* Networking+AllUsers.swift */,
 				629D9F66252CC5B100945A9F /* Networking+AddUser.swift */,
+				6248820E252F526F00677FC3 /* Networking+EditUser.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -550,16 +537,18 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		629D9F5B252CC21F00945A9F /* AddUser */ = {
+		629D9F5B252CC21F00945A9F /* AddOrEditUser */ = {
 			isa = PBXGroup;
 			children = (
 				624F0779252E204500805469 /* Private */,
-				629D9F5C252CC23D00945A9F /* AddUserViewController.swift */,
-				629D9F5D252CC23D00945A9F /* AddUserView.swift */,
-				629D9F5E252CC23D00945A9F /* AddUserViewModel.swift */,
-				629D9F5F252CC23D00945A9F /* AddUserViewController.xib */,
+				629D9F5C252CC23D00945A9F /* InputFormViewController.swift */,
+				629D9F5D252CC23D00945A9F /* ImportFormView.swift */,
+				629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */,
+				622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */,
+				6248820C252F4CFF00677FC3 /* AddUserViewModel.swift */,
+				629D9F5F252CC23D00945A9F /* InputFormViewController.xib */,
 			);
-			path = AddUser;
+			path = AddOrEditUser;
 			sourceTree = "<group>";
 		};
 		629D9F68252CC60500945A9F /* EmptyModel */ = {
@@ -660,9 +649,8 @@
 				629D9F2B252C8E3A00945A9F /* SpinnerView.xib in Resources */,
 				629D9EE3252C75FE00945A9F /* Assets.xcassets in Resources */,
 				629D9F4F252C9F4700945A9F /* UserTableViewCell.xib in Resources */,
-				629D9F63252CC23D00945A9F /* AddUserViewController.xib in Resources */,
+				629D9F63252CC23D00945A9F /* InputFormViewController.xib in Resources */,
 				624F0781252E208700805469 /* FieldView.xib in Resources */,
-				622F67A6252F09CB00EA7C2A /* EditUserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +704,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				629D9F25252C8E3400945A9F /* Section.swift in Sources */,
-				629D9F60252CC23D00945A9F /* AddUserViewController.swift in Sources */,
+				629D9F60252CC23D00945A9F /* InputFormViewController.swift in Sources */,
 				629D9F14252C7AC300945A9F /* AppCoordinator.swift in Sources */,
 				629D9F10252C793800945A9F /* ServiceContainer.swift in Sources */,
 				629D9F43252C904600945A9F /* Networking.swift in Sources */,
@@ -725,12 +713,11 @@
 				629D9F26252C8E3400945A9F /* BaseCell.swift in Sources */,
 				629D9F3E252C8EA100945A9F /* NetworkError.swift in Sources */,
 				629D9EF4252C771500945A9F /* RootCoordinator.swift in Sources */,
-				622F67A4252F09CB00EA7C2A /* EditUserView.swift in Sources */,
 				629D9F1C252C7B4100945A9F /* UserListViewModel.swift in Sources */,
 				624F078D252E52F100805469 /* EmailInputView.swift in Sources */,
-				622F67A3252F09CB00EA7C2A /* EditUserViewController.swift in Sources */,
 				629D9F0D252C791100945A9F /* ContainerViewController.swift in Sources */,
 				629D9F24252C8E3400945A9F /* TableAdapter.swift in Sources */,
+				6248820D252F4CFF00677FC3 /* AddUserViewModel.swift in Sources */,
 				629D9F2A252C8E3A00945A9F /* SpinnerView.swift in Sources */,
 				629D9F3C252C8EA100945A9F /* ParserError.swift in Sources */,
 				629D9F67252CC5B100945A9F /* Networking+AddUser.swift in Sources */,
@@ -738,7 +725,7 @@
 				629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */,
 				629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */,
 				629D9F6E252CFCA500945A9F /* NewUserModel.swift in Sources */,
-				629D9F62252CC23D00945A9F /* AddUserViewModel.swift in Sources */,
+				629D9F62252CC23D00945A9F /* InputFormViewModel.swift in Sources */,
 				629D9EFC252C77BC00945A9F /* Functions.swift in Sources */,
 				624F0789252E527900805469 /* InputView.swift in Sources */,
 				629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */,
@@ -758,10 +745,11 @@
 				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
-				629D9F61252CC23D00945A9F /* AddUserView.swift in Sources */,
+				629D9F61252CC23D00945A9F /* ImportFormView.swift in Sources */,
 				629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */,
 				624F0775252E1D0200805469 /* Validator.swift in Sources */,
 				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,
+				6248820F252F526F00677FC3 /* Networking+EditUser.swift in Sources */,
 				629D9F0A252C78AE00945A9F /* UINavigationController+Extensions.swift in Sources */,
 				629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */,
 				629D9F31252C8E8F00945A9F /* Hiddable.swift in Sources */,

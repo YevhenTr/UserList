@@ -1,5 +1,5 @@
 //
-//  AddUserViewController.swift
+//  InputFormViewController.swift
 //  UserListDemo
 //
 //  Created by Yevhen Triukhan on 06.10.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddUserViewController: BaseViewController<AddUserView, AddUserViewModel> {
+class InputFormViewController: BaseViewController<ImportFormView, InputFormViewModel> {
 
     // MARK: - View Lifecycle
     

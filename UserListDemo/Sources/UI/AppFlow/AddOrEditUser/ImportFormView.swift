@@ -1,5 +1,5 @@
 //
-//  AddUserView.swift
+//  ImportFormView.swift
 //  UserListDemo
 //
 //  Created by Yevhen Triukhan on 06.10.2020.
@@ -10,7 +10,7 @@ import UIKit
 
 import RxSwift
 
-class AddUserView: BaseView<AddUserViewModel> {
+class ImportFormView: BaseView<InputFormViewModel> {
 
     // MARK: - Subtypes
 
@@ -41,6 +41,8 @@ class AddUserView: BaseView<AddUserViewModel> {
         .safeAreaInsets.bottom
         ?? 0
     
+    private let someSignal = Observable.just(true)
+    
     // MARK: - View Lifecycle
     
     override func awakeFromNib() {
@@ -52,7 +54,7 @@ class AddUserView: BaseView<AddUserViewModel> {
       
     // MARK: - Public
 
-    override public func fill(with viewModel: AddUserViewModel) {
+    override public func fill(with viewModel: InputFormViewModel) {
         super.fill(with: viewModel)
         
         self.bindKeyboardService(with: viewModel)
@@ -85,7 +87,7 @@ class AddUserView: BaseView<AddUserViewModel> {
         self.addUserButton?.isEnabled = false
     }
     
-    private func bindKeyboardService(with viewModel: AddUserViewModel) {
+    private func bindKeyboardService(with viewModel: InputFormViewModel) {
         let bottomInset = self.bottomInset
         let scrollView = self.contentScrollView
         
@@ -118,18 +120,18 @@ class AddUserView: BaseView<AddUserViewModel> {
         let allFieldsNotEmpty = Observable.combineLatest(firstNameNotEmpty, lastNameNotEmpty, emailNotEmpty) { $0 && $1 && $2 }
         
         Observable
-            .combineLatest(allFieldsValid, allFieldsNotEmpty) { $0 && $1 }
+            .combineLatest(allFieldsValid, allFieldsNotEmpty, self.someSignal) { $0 && $1 && $2 }
             .bind { [weak self] result in
                 self?.addUserButton?.isEnabled = result
             }
             .disposed(by: self)
     }
     
-    private func bindButtons(with viewModel: AddUserViewModel) {
+    private func bindButtons(with viewModel: InputFormViewModel) {
         self.addUserButton?.rx.tap
             .bind { [weak self, weak viewModel] _ in
                 if let newUser = self?.createUserModel() {
-                    viewModel?.add(newUser: newUser)
+                    viewModel?.save(newUser: newUser)
                 } else {
                     viewModel?.show(error: ParserError.invalidData)
                 }
