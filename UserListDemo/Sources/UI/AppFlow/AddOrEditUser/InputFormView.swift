@@ -72,15 +72,15 @@ class InputFormView: BaseView<InputFormViewModel> {
         self.bindButtons(with: viewModel)
         
         if let user = viewModel.user {
-            self.bind(user: user, viewModel: viewModel)
-            
             self.addUserButton?.setTitle(Text.editUserButton, for: .normal)
-            
             
             self.urlInputView?.text = user.imageURL
             self.userPhotoContainerView?.isHidden = false
             self.userPhotoImageView?.kf
                 .setImage(with: URL(string: user.imageURL), placeholder: self.placeholderImage)
+            
+            //  should be start after all additional tuning
+            self.bind(user: user, viewModel: viewModel)
         }
     }
     
@@ -135,6 +135,15 @@ class InputFormView: BaseView<InputFormViewModel> {
         let allFieldsNotEmpty = Observable.combineLatest(firstNameNotEmpty, lastNameNotEmpty, emailNotEmpty) { $0 && $1 && $2 }
         let modelChanged = self.isModelChanged
         
+        allFieldsValid.bind {
+            debugPrint("allFieldsValid = \($0)")
+        }
+        allFieldsNotEmpty.bind {
+            debugPrint("allFieldsNotEmpty = \($0)")
+        }
+        modelChanged.bind {
+            debugPrint("modelChanged = \($0)")
+        }
         Observable
             .combineLatest(allFieldsValid, allFieldsNotEmpty, modelChanged) { $0 && $1 && $2 }
             .bind { [weak self] result in
@@ -159,7 +168,8 @@ class InputFormView: BaseView<InputFormViewModel> {
         guard
             let firstNameField = self.firstNameInputView?.inputTextField,
             let lastNameField = self.lastNameInputView?.inputTextField,
-            let emailField = self.emailInputView?.inputTextField
+            let emailField = self.emailInputView?.inputTextField,
+            let urlField = self.urlInputView?.inputTextField
         else { return }
         
         firstNameField.text = user.firstName
@@ -173,9 +183,9 @@ class InputFormView: BaseView<InputFormViewModel> {
         let firstNameChanged = firstNameField.rx.text.orEmpty.map { $0 != user.firstName }.asObservable()
         let lastNameChanged = lastNameField.rx.text.orEmpty.map { $0 != user.lastName }.asObservable()
         let emailChanged = emailField.rx.text.orEmpty.map { $0 != user.email }.asObservable()
-
+        let urlChanged = urlField.rx.text.orEmpty.map { $0 != user.imageURL }
         Observable
-            .combineLatest(firstNameChanged, lastNameChanged, emailChanged) { $0 || $1 || $2 }
+            .combineLatest(firstNameChanged, lastNameChanged, emailChanged, urlChanged) { $0 || $1 || $2 || $3 }
             .bind { [weak self] in self?.isModelChanged.accept($0) }
             .disposed(by: self)
     }
