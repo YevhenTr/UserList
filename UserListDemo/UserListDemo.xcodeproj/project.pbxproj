@@ -62,7 +62,7 @@
 		629D9F57252CBBC300945A9F /* AppTextConstant+UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */; };
 		629D9F5A252CBE0A00945A9F /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F59252CBE0A00945A9F /* Array+Extensions.swift */; };
 		629D9F60252CC23D00945A9F /* InputFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5C252CC23D00945A9F /* InputFormViewController.swift */; };
-		629D9F61252CC23D00945A9F /* ImportFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5D252CC23D00945A9F /* ImportFormView.swift */; };
+		629D9F61252CC23D00945A9F /* InputFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5D252CC23D00945A9F /* InputFormView.swift */; };
 		629D9F62252CC23D00945A9F /* InputFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */; };
 		629D9F63252CC23D00945A9F /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F5F252CC23D00945A9F /* InputFormViewController.xib */; };
 		629D9F65252CC43900945A9F /* AppTextConstant+UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F64252CC43900945A9F /* AppTextConstant+UserForm.swift */; };
@@ -130,7 +130,7 @@
 		629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+UserList.swift"; sourceTree = "<group>"; };
 		629D9F59252CBE0A00945A9F /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		629D9F5C252CC23D00945A9F /* InputFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewController.swift; sourceTree = "<group>"; };
-		629D9F5D252CC23D00945A9F /* ImportFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFormView.swift; sourceTree = "<group>"; };
+		629D9F5D252CC23D00945A9F /* InputFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormView.swift; sourceTree = "<group>"; };
 		629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewModel.swift; sourceTree = "<group>"; };
 		629D9F5F252CC23D00945A9F /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
 		629D9F64252CC43900945A9F /* AppTextConstant+UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+UserForm.swift"; sourceTree = "<group>"; };
@@ -545,7 +545,7 @@
 			children = (
 				624F0779252E204500805469 /* Private */,
 				629D9F5C252CC23D00945A9F /* InputFormViewController.swift */,
-				629D9F5D252CC23D00945A9F /* ImportFormView.swift */,
+				629D9F5D252CC23D00945A9F /* InputFormView.swift */,
 				629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */,
 				6248820C252F4CFF00677FC3 /* AddUserViewModel.swift */,
 				622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */,
@@ -748,7 +748,7 @@
 				629D9F34252C8E8F00945A9F /* NetworkAPI.swift in Sources */,
 				629D9F40252C8FA200945A9F /* UITableView+Extensions.swift in Sources */,
 				629D9F04252C780300945A9F /* BaseViewModel.swift in Sources */,
-				629D9F61252CC23D00945A9F /* ImportFormView.swift in Sources */,
+				629D9F61252CC23D00945A9F /* InputFormView.swift in Sources */,
 				629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */,
 				624F0775252E1D0200805469 /* Validator.swift in Sources */,
 				629D9F51252CB1E800945A9F /* UIView+Extenstions.swift in Sources */,

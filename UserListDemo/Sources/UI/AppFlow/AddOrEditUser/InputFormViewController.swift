@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InputFormViewController: BaseViewController<ImportFormView, InputFormViewModel> {
+class InputFormViewController: BaseViewController<InputFormView, InputFormViewModel> {
 
     // MARK: - View Lifecycle
     

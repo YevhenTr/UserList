@@ -1,5 +1,5 @@
 //
-//  ImportFormView.swift
+//  InputFormView.swift
 //  UserListDemo
 //
 //  Created by Yevhen Triukhan on 06.10.2020.
@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class ImportFormView: BaseView<InputFormViewModel> {
+class InputFormView: BaseView<InputFormViewModel> {
 
     // MARK: - Subtypes
 
