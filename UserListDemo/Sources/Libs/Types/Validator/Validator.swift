@@ -67,6 +67,12 @@ struct Rule {
         return isValid ? nil : "Must contain only letters"
     })
     
+    static let http = Rule(check: { string in
+        let isValid = URL(string: string) != nil && string.hasPrefix("http")
+        
+        return isValid ? nil : "Must have valid http(s) link"
+    })
+    
     // MARK: - Properties
     // return nil if matches, error message otherwise
     

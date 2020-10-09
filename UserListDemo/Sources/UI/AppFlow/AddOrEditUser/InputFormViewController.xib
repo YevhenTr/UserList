@@ -24,7 +24,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="734"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xgd-AP-znF">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="684.33333333333337"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="666"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RcS-f1-6J3" customClass="NameInputView" customModule="UserListDemo" customModuleProvider="target">
                                             <rect key="frame" x="26" y="16" width="323" height="83"/>
@@ -47,62 +47,40 @@
                                                 <constraint firstAttribute="height" constant="83" id="1VV-DF-nzv"/>
                                             </constraints>
                                         </view>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uze-Cf-ftc" userLabel="Photo Stack">
-                                            <rect key="frame" x="26" y="361" width="323" height="184.33333333333337"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2bp-UN-i0V">
+                                            <rect key="frame" x="26" y="361" width="323" height="166"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-rb-D8S">
-                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="19.333333333333332"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZJ-Yz-83o" userLabel="8pt">
-                                                    <rect key="frame" x="0.0" y="19.333333333333314" width="323" height="8"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIF-gf-z6u" customClass="URLInputView" customModule="UserListDemo" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="83"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="8" id="bGR-Zu-WoP"/>
+                                                        <constraint firstAttribute="height" constant="83" id="MfD-xk-VOe"/>
                                                     </constraints>
-                                                </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZY-O0-gas">
-                                                    <rect key="frame" x="0.0" y="27.333333333333314" width="323" height="120"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Rt-ci-ghP" userLabel="Image Preview Stack">
+                                                    <rect key="frame" x="0.0" y="83" width="323" height="83"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-y8-uBh">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Daj-Bt-RcF">
+                                                            <rect key="frame" x="0.0" y="0.0" width="83" height="83"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="nVW-y8-uBh" secondAttribute="height" id="J5C-Pd-1ZX"/>
+                                                                <constraint firstAttribute="width" secondItem="Daj-Bt-RcF" secondAttribute="height" multiplier="1:1" id="ZeY-aW-oO2"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-dD-haw">
-                                                            <rect key="frame" x="120" y="0.0" width="203" height="120"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkF-k3-CXM">
+                                                            <rect key="frame" x="83" y="0.0" width="240" height="83"/>
                                                         </stackView>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="120" id="lTo-2B-WQa"/>
-                                                    </constraints>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhG-4n-cwU" userLabel="8pt">
-                                                    <rect key="frame" x="0.0" y="147.33333333333337" width="323" height="4"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="4" id="pVS-aD-odF"/>
-                                                    </constraints>
-                                                </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SK-EL-YS6">
-                                                    <rect key="frame" x="0.0" y="151.33333333333337" width="323" height="33"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="33" id="Bwi-OM-Z79"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBo-L8-sNV" userLabel="1pt">
-                                            <rect key="frame" x="26" y="577.33333333333337" width="323" height="1"/>
+                                            <rect key="frame" x="26" y="559" width="323" height="1"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="1Cg-xg-zhx"/>
                                             </constraints>
                                         </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pye-Tg-Hul" customClass="CustomButton" customModule="UserListDemo" customModuleProvider="target">
-                                            <rect key="frame" x="26" y="610.33333333333337" width="323" height="33"/>
+                                            <rect key="frame" x="26" y="592" width="323" height="33"/>
                                             <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="tgH-Uu-4tg"/>
@@ -113,7 +91,7 @@
                                             </state>
                                         </button>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaW-OK-OJX" userLabel="1pt">
-                                            <rect key="frame" x="26" y="675.33333333333337" width="323" height="1"/>
+                                            <rect key="frame" x="26" y="657" width="323" height="1"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="SUK-je-Wea"/>
                                             </constraints>
@@ -150,13 +128,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
                 <outlet property="addUserButton" destination="Pye-Tg-Hul" id="FHg-0B-dof"/>
-                <outlet property="addUserPhotoButton" destination="4SK-EL-YS6" id="IDb-C3-aAL"/>
                 <outlet property="contentScrollView" destination="YMG-UX-Beq" id="9II-PM-HQ9"/>
                 <outlet property="emailInputView" destination="zdy-Hz-nLA" id="3HX-8c-Wfm"/>
                 <outlet property="firstNameInputView" destination="RcS-f1-6J3" id="CIx-f9-h2m"/>
                 <outlet property="lastNameInputView" destination="JFF-q7-UiD" id="YJP-ZR-B1k"/>
-                <outlet property="userPhotoImageView" destination="nVW-y8-uBh" id="4RS-Jz-C0k"/>
-                <outlet property="userPhotoLabel" destination="s8e-rb-D8S" id="WvX-EC-xYa"/>
+                <outlet property="urlInputView" destination="lIF-gf-z6u" id="mKH-GC-LsU"/>
+                <outlet property="userPhotoContainerView" destination="1Rt-ci-ghP" id="Doa-kf-c80"/>
+                <outlet property="userPhotoImageView" destination="Daj-Bt-RcF" id="Mbm-Om-Xob"/>
             </connections>
             <point key="canvasLocation" x="132" y="153.69458128078819"/>
         </view>

@@ -10,6 +10,7 @@ import UIKit
 
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class ImportFormView: BaseView<InputFormViewModel> {
 
@@ -29,10 +30,10 @@ class ImportFormView: BaseView<InputFormViewModel> {
     @IBOutlet var firstNameInputView: NameInputView?
     @IBOutlet var lastNameInputView: NameInputView?
     @IBOutlet var emailInputView: EmailInputView?
+    @IBOutlet var urlInputView: URLInputView?
 
-    @IBOutlet var userPhotoLabel: UILabel?
+    @IBOutlet var userPhotoContainerView: UIStackView?
     @IBOutlet var userPhotoImageView: UIImageView?
-    @IBOutlet var addUserPhotoButton: UIButton?
     
     @IBOutlet var addUserButton: CustomButton?
     
@@ -43,6 +44,15 @@ class ImportFormView: BaseView<InputFormViewModel> {
         ?? 0
     
     private let isModelChanged = BehaviorRelay(value: true)
+    private let placeholderImage = UIImage(named: "userphoto_placeholder_image")
+
+    private var downloadImageTask: DownloadTask?
+    
+    // MARK: - Init and Deinit
+    
+    deinit {
+        self.downloadImageTask?.cancel()
+    }
     
     // MARK: - View Lifecycle
     
@@ -63,7 +73,14 @@ class ImportFormView: BaseView<InputFormViewModel> {
         
         if let user = viewModel.user {
             self.bind(user: user, viewModel: viewModel)
+            
             self.addUserButton?.setTitle(Text.editUserButton, for: .normal)
+            
+            
+            self.urlInputView?.text = user.imageURL
+            self.userPhotoContainerView?.isHidden = false
+            self.userPhotoImageView?.kf
+                .setImage(with: URL(string: user.imageURL), placeholder: self.placeholderImage)
         }
     }
     
@@ -75,18 +92,10 @@ class ImportFormView: BaseView<InputFormViewModel> {
         self.firstNameInputView?.titleText = Text.firstNameTitle
         self.lastNameInputView?.titleText = Text.lastNameTitle
         self.emailInputView?.titleText = Text.emailTitle
+        self.urlInputView?.titleText = Text.photoTitle
         
-        self.userPhotoLabel?.text = Text.photoTitle
-        
-        self.userPhotoImageView?.image = UIImage(named: "userphoto_placeholder_image")
-        
-        self.addUserPhotoButton?
-            .set(cornerRadius: Constant.cornerRadius)
-            .set(borderColor: .systemBlue)
-            .set(borderWidth: Constant.borderWidth)
-            .setTitle(Text.photoButton, for: .normal)
-        self.addUserPhotoButton?.isEnabled = false
-        
+        self.userPhotoContainerView?.isHidden = true
+                
         self.addUserButton?
             .set(cornerRadius: Constant.cornerRadius)
             .setTitle(Text.addUserButton, for: .normal)
