@@ -26,6 +26,6 @@ final class URLInputView: InputView {
         self.text = Constants.prefix
         self.keyboardType = .default
         
-        self.rules = [.notEmpty, .http]
+        self.rules = []
     }
 }
