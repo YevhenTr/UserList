@@ -15,7 +15,7 @@ class ImportFormView: BaseView<InputFormViewModel> {
 
     // MARK: - Subtypes
 
-    typealias Text = AppTextConstants.AddUser
+    typealias Text = AppTextConstants.UserForm
     
     private enum Constant {
         static let cornerRadius: CGFloat = 5
@@ -63,6 +63,7 @@ class ImportFormView: BaseView<InputFormViewModel> {
         
         if let user = viewModel.user {
             self.bind(user: user, viewModel: viewModel)
+            self.addUserButton?.setTitle(Text.editUserButton, for: .normal)
         }
     }
     

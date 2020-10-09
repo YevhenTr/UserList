@@ -21,6 +21,10 @@ class InputFormViewController: BaseViewController<ImportFormView, InputFormViewM
     // MARK: - Private
     
     private func configure() {
-        self.title = AppTextConstants.AddUser.navigationTitle
+        if let user = self.viewModel.user {
+            self.title = user.firstName + " " + user.lastName
+        } else {
+            self.title = AppTextConstants.UserForm.navigationTitle
+        }
     }
 }

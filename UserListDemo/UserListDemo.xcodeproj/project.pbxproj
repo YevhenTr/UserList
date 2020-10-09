@@ -64,7 +64,7 @@
 		629D9F61252CC23D00945A9F /* ImportFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5D252CC23D00945A9F /* ImportFormView.swift */; };
 		629D9F62252CC23D00945A9F /* InputFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */; };
 		629D9F63252CC23D00945A9F /* InputFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 629D9F5F252CC23D00945A9F /* InputFormViewController.xib */; };
-		629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */; };
+		629D9F65252CC43900945A9F /* AppTextConstant+UserForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F64252CC43900945A9F /* AppTextConstant+UserForm.swift */; };
 		629D9F67252CC5B100945A9F /* Networking+AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F66252CC5B100945A9F /* Networking+AddUser.swift */; };
 		629D9F6A252CC62400945A9F /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F69252CC62400945A9F /* EmptyModel.swift */; };
 		629D9F6C252CC88700945A9F /* EncoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9F6B252CC88700945A9F /* EncoderError.swift */; };
@@ -131,7 +131,7 @@
 		629D9F5D252CC23D00945A9F /* ImportFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportFormView.swift; sourceTree = "<group>"; };
 		629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFormViewModel.swift; sourceTree = "<group>"; };
 		629D9F5F252CC23D00945A9F /* InputFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputFormViewController.xib; sourceTree = "<group>"; };
-		629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+AddUser.swift"; sourceTree = "<group>"; };
+		629D9F64252CC43900945A9F /* AppTextConstant+UserForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppTextConstant+UserForm.swift"; sourceTree = "<group>"; };
 		629D9F66252CC5B100945A9F /* Networking+AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Networking+AddUser.swift"; sourceTree = "<group>"; };
 		629D9F69252CC62400945A9F /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		629D9F6B252CC88700945A9F /* EncoderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderError.swift; sourceTree = "<group>"; };
@@ -523,7 +523,7 @@
 			children = (
 				629D9F54252CBB3900945A9F /* AppTextConstants.swift */,
 				629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */,
-				629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */,
+				629D9F64252CC43900945A9F /* AppTextConstant+UserForm.swift */,
 			);
 			path = TextConstants;
 			sourceTree = "<group>";
@@ -731,7 +731,7 @@
 				629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */,
 				624F078B252E52E600805469 /* NameInputView.swift in Sources */,
 				629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */,
-				629D9F65252CC43900945A9F /* AppTextConstant+AddUser.swift in Sources */,
+				629D9F65252CC43900945A9F /* AppTextConstant+UserForm.swift in Sources */,
 				629D9F6C252CC88700945A9F /* EncoderError.swift in Sources */,
 				624F0780252E208700805469 /* FieldView.swift in Sources */,
 				629D9F1B252C7B4100945A9F /* UserListView.swift in Sources */,

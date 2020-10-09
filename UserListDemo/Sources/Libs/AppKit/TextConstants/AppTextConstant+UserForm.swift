@@ -1,5 +1,5 @@
 //
-//  AppTextConstant+AddUser.swift
+//  AppTextConstant+UserForm.swift
 //  UserListDemo
 //
 //  Created by Yevhen Triukhan on 06.10.2020.
@@ -10,9 +10,9 @@ import Foundation
 
 extension AppTextConstants {
     
-    enum AddUser {
+    enum UserForm {
         
-        static let navigationTitle = "User Info"
+        static let navigationTitle = "New User"
         
         static let firstNameTitle = "First Name"
         static let lastNameTitle = "Last Name"
@@ -21,5 +21,6 @@ extension AppTextConstants {
 
         static let photoButton = "Add Photo"
         static let addUserButton = "Add User"
+        static let editUserButton = "Edit User"
     }
 }
