@@ -11,7 +11,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class UserListView: BaseView<UserListViewModel> {
+class UserListView: SpinnableView<UserListViewModel> {
 
     // MARK: - Subtypes
 
@@ -35,11 +35,6 @@ class UserListView: BaseView<UserListViewModel> {
         super.fill(with: viewModel)
         
         let tableAdapter = self.tableAdapter
-        
-        viewModel.isLoading
-            .observeOn(MainScheduler.asyncInstance)
-            .bind { _ in }
-            .disposed(by: self)
         
         viewModel.users
             .observeOn(MainScheduler.asyncInstance)

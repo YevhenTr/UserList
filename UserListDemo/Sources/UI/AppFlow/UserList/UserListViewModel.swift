@@ -21,7 +21,6 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     // MARK: - Properties
     
     public let users = BehaviorRelay<[UserViewData]>(value: [])
-    public let isLoading = BehaviorRelay<Bool>(value: false)
     
     private let networking: Networking
     
@@ -38,10 +37,10 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     // MARK: - Public
     
     public func getAllUsers() {
-        self.isLoading.accept(true)
+        self.lockHandler?()
         
         self.networking.getAllUsers { [weak self] result in
-            self?.isLoading.accept(false)
+            self?.unlockHandler?()
             
             switch result {
             case .failure(let error):

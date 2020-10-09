@@ -18,7 +18,8 @@ class EditUserViewModel: InputFormViewModel {
     
     override func save(newUser: NewUserModel) {
 //        guard let id = self.user?.id else { return }
-        
+
+        self.lockHandler?()
 //        self.networking.edit(id: id, newUser: newUser) { [weak self] result in
 //            switch result {
 //            case .failure(let error):
@@ -30,7 +31,7 @@ class EditUserViewModel: InputFormViewModel {
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
             debugPrint("error or succes with newUser \(newUser.user.firstName)")
-            
+            self.unlockHandler?()
             DispatchQueue.main.async {
                 self.eventHandler(.back)
             }

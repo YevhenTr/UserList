@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import Kingfisher
 
-class InputFormView: BaseView<InputFormViewModel> {
+class InputFormView: SpinnableView<InputFormViewModel> {
 
     // MARK: - Subtypes
 

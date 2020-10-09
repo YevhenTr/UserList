@@ -8,11 +8,14 @@
 
 import Foundation
 
-class BaseViewModel<Event>: NSObject {
+class BaseViewModel<Event>: NSObject, UnlockHandable {
     
     // MARK: - Properties
 
     public let eventHandler: Handler<Event>
+    
+    public var lockHandler: EmptyAction?
+    public var unlockHandler: EmptyAction?
     
     // MARK: - Init and Deinit
     

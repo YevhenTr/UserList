@@ -13,6 +13,7 @@ class AddUserViewModel: InputFormViewModel {
     // MARK: - Public
     
     override func save(newUser: NewUserModel) {
+        self.lockHandler?()
 //        self.networking.add(newUser: newUser) { [weak self] result in
 //            switch result {
 //            case .failure(let error):
@@ -23,6 +24,7 @@ class AddUserViewModel: InputFormViewModel {
 //        }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
+            self.unlockHandler?()
             debugPrint("error or succes with newUser \(newUser.user.firstName)")
             
             DispatchQueue.main.async {

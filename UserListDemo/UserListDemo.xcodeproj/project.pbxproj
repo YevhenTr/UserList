@@ -21,6 +21,8 @@
 		624F078D252E52F100805469 /* EmailInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624F078C252E52F100805469 /* EmailInputView.swift */; };
 		6266C36E252DA00800D95BE3 /* KeyboardNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6266C36D252DA00800D95BE3 /* KeyboardNotificationService.swift */; };
 		6285772A25307FD10020F3B2 /* URLInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285772925307FD10020F3B2 /* URLInputView.swift */; };
+		6285772C25309D7E0020F3B2 /* UnlockHandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285772B25309D7E0020F3B2 /* UnlockHandable.swift */; };
+		6285772E25309DC80020F3B2 /* SpinnableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6285772D25309DC80020F3B2 /* SpinnableView.swift */; };
 		629D9EDA252C75FB00945A9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9ED9252C75FB00945A9F /* AppDelegate.swift */; };
 		629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629D9EDB252C75FB00945A9F /* SceneDelegate.swift */; };
 		629D9EE3252C75FE00945A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629D9EE2252C75FE00945A9F /* Assets.xcassets */; };
@@ -87,6 +89,8 @@
 		624F078C252E52F100805469 /* EmailInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailInputView.swift; sourceTree = "<group>"; };
 		6266C36D252DA00800D95BE3 /* KeyboardNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationService.swift; sourceTree = "<group>"; };
 		6285772925307FD10020F3B2 /* URLInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLInputView.swift; sourceTree = "<group>"; };
+		6285772B25309D7E0020F3B2 /* UnlockHandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockHandable.swift; sourceTree = "<group>"; };
+		6285772D25309DC80020F3B2 /* SpinnableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnableView.swift; sourceTree = "<group>"; };
 		629D9ED6252C75FB00945A9F /* UserListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629D9ED9252C75FB00945A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		629D9EDB252C75FB00945A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -452,6 +456,7 @@
 			children = (
 				629D9F28252C8E3A00945A9F /* SpinnerView.swift */,
 				629D9F29252C8E3A00945A9F /* SpinnerView.xib */,
+				6285772D25309DC80020F3B2 /* SpinnableView.swift */,
 			);
 			path = SpinnerView;
 			sourceTree = "<group>";
@@ -462,6 +467,7 @@
 				629D9F2D252C8E8F00945A9F /* Hiddable.swift */,
 				629D9F2F252C8E8F00945A9F /* DisposeBagOwner.swift */,
 				629D9F30252C8E8F00945A9F /* NetworkAPI.swift */,
+				6285772B25309D7E0020F3B2 /* UnlockHandable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -728,10 +734,12 @@
 				629D9F4E252C9F4700945A9F /* UserTableViewCell.swift in Sources */,
 				629D9EDC252C75FB00945A9F /* SceneDelegate.swift in Sources */,
 				629D9F6E252CFCA500945A9F /* NewUserModel.swift in Sources */,
+				6285772E25309DC80020F3B2 /* SpinnableView.swift in Sources */,
 				629D9F62252CC23D00945A9F /* InputFormViewModel.swift in Sources */,
 				629D9EFC252C77BC00945A9F /* Functions.swift in Sources */,
 				624F0789252E527900805469 /* InputView.swift in Sources */,
 				629D9F55252CBB3900945A9F /* AppTextConstants.swift in Sources */,
+				6285772C25309D7E0020F3B2 /* UnlockHandable.swift in Sources */,
 				624F078B252E52E600805469 /* NameInputView.swift in Sources */,
 				629D9F37252C8E9C00945A9F /* NibDesignable.swift in Sources */,
 				629D9F65252CC43900945A9F /* AppTextConstant+UserForm.swift in Sources */,
