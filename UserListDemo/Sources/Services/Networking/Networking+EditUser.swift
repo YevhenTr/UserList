@@ -20,7 +20,7 @@ extension Networking {
         let queryItems = [URLQueryItem(name: "user_id", value: id)]
         let request = self.createRequest(method: .post,
                                          queryItems: queryItems,
-                                         path: "/users.php",
+                                         path: "/edit_user.php",
                                          body: data)
 
         return self.send(request: request, completion: completion)

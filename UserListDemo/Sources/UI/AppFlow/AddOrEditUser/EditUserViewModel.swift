@@ -17,14 +17,16 @@ class EditUserViewModel: InputFormViewModel {
     // MARK: - Public
     
     override func save(newUser: NewUserModel) {
-//        self.networking.add(newUser: newUser) { [weak self] result in
-//            switch result {
-//            case .failure(let error):
-//                self?.eventHandler(.error(error))
-//            case .success:
-//                self?.eventHandler(.back)
-//            }
-//        }
+        guard let id = self.user?.id else { return }
+        
+        self.networking.edit(id: id, newUser: newUser) { [weak self] result in
+            switch result {
+            case .failure(let error):
+                self?.eventHandler(.error(error))
+            case .success:
+                self?.eventHandler(.back)
+            }
+        }
         
         DispatchQueue.global().asyncAfter(deadline: .now() + .seconds(2)) {
             debugPrint("error or succes with newUser \(newUser.user.firstName)")

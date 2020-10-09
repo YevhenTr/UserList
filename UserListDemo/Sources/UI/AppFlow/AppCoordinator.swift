@@ -52,9 +52,9 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
         switch event {
         case .addUser:
             self.push(controller: self.createAddUserViewController())
-        case .showUser(let id):
-            debugPrint("showUser \(id)")
-            self.push(controller: self.createEditUserViewController())
+        case .showUser(let user):
+            debugPrint("showUser \(user.id)")
+            self.push(controller: self.createEditUserViewController(user: user))
         case .error(let error):
             debugPrint("error \(error.localizedDescription)")
         }
@@ -67,8 +67,8 @@ public final class AppCoordinator: BaseCoordinator<AppCoordinator.Event> {
         return controller
     }
     
-    private func createEditUserViewController() -> InputFormViewController {
-        let viewModel = EditUserViewModel(serviceContainer: self.serviceContainer, eventHandler: self.inputFormEventHandler)
+    private func createEditUserViewController(user: UserModel) -> InputFormViewController {
+        let viewModel = EditUserViewModel(user: user, serviceContainer: self.serviceContainer, eventHandler: self.inputFormEventHandler)
         let controller = InputFormViewController(viewModel: viewModel)
 
         return controller

@@ -9,6 +9,7 @@
 import UIKit
 
 import RxSwift
+import RxCocoa
 
 class ImportFormView: BaseView<InputFormViewModel> {
 
@@ -41,7 +42,7 @@ class ImportFormView: BaseView<InputFormViewModel> {
         .safeAreaInsets.bottom
         ?? 0
     
-    private let someSignal = Observable.just(true)
+    private let isModelChanged = BehaviorRelay(value: true)
     
     // MARK: - View Lifecycle
     
@@ -59,6 +60,10 @@ class ImportFormView: BaseView<InputFormViewModel> {
         
         self.bindKeyboardService(with: viewModel)
         self.bindButtons(with: viewModel)
+        
+        if let user = viewModel.user {
+            self.bind(user: user, viewModel: viewModel)
+        }
     }
     
     // MARK: - Private
@@ -118,9 +123,10 @@ class ImportFormView: BaseView<InputFormViewModel> {
         
         let allFieldsValid = Observable.combineLatest(firstNameValid, lastNameValid, emailValid) { $0 && $1 && $2 }
         let allFieldsNotEmpty = Observable.combineLatest(firstNameNotEmpty, lastNameNotEmpty, emailNotEmpty) { $0 && $1 && $2 }
+        let modelChanged = self.isModelChanged
         
         Observable
-            .combineLatest(allFieldsValid, allFieldsNotEmpty, self.someSignal) { $0 && $1 && $2 }
+            .combineLatest(allFieldsValid, allFieldsNotEmpty, modelChanged) { $0 && $1 && $2 }
             .bind { [weak self] result in
                 self?.addUserButton?.isEnabled = result
             }
@@ -136,6 +142,31 @@ class ImportFormView: BaseView<InputFormViewModel> {
                     viewModel?.show(error: ParserError.invalidData)
                 }
             }
+            .disposed(by: self)
+    }
+    
+    private func bind(user: UserModel, viewModel: InputFormViewModel) {
+        guard
+            let firstNameField = self.firstNameInputView?.inputTextField,
+            let lastNameField = self.lastNameInputView?.inputTextField,
+            let emailField = self.emailInputView?.inputTextField
+        else { return }
+        
+        firstNameField.text = user.firstName
+        lastNameField.text = user.lastName
+        emailField.text = user.email
+        
+        [self.firstNameInputView, self.lastNameInputView, self.emailInputView]
+            .compactMap { $0 }
+            .forEach { $0.refreshStates() }
+                
+        let firstNameChanged = firstNameField.rx.text.orEmpty.map { $0 != user.firstName }.asObservable()
+        let lastNameChanged = lastNameField.rx.text.orEmpty.map { $0 != user.lastName }.asObservable()
+        let emailChanged = emailField.rx.text.orEmpty.map { $0 != user.email }.asObservable()
+
+        Observable
+            .combineLatest(firstNameChanged, lastNameChanged, emailChanged) { $0 || $1 || $2 }
+            .bind { [weak self] in self?.isModelChanged.accept($0) }
             .disposed(by: self)
     }
     

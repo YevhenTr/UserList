@@ -19,12 +19,14 @@ class InputFormViewModel: BaseViewModel<InputFormEvent> {
     
     public let keyboardNotificationService: KeyboardNotificationsService
     public let networking: Networking
+    public let user: UserModel?
     
     // MARK: - Init and Deinit
     
-    init(serviceContainer: ServiceContainer, eventHandler: @escaping Handler<InputFormEvent>) {
+    init(user: UserModel? = nil, serviceContainer: ServiceContainer, eventHandler: @escaping Handler<InputFormEvent>) {
         self.networking = serviceContainer.networking
         self.keyboardNotificationService = serviceContainer.keyboardNotificationService
+        self.user = user
         
         super.init(eventHandler: eventHandler)
     }

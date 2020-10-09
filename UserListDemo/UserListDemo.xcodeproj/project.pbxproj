@@ -522,8 +522,8 @@
 			isa = PBXGroup;
 			children = (
 				629D9F54252CBB3900945A9F /* AppTextConstants.swift */,
-				629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */,
 				629D9F56252CBBC300945A9F /* AppTextConstant+UserList.swift */,
+				629D9F64252CC43900945A9F /* AppTextConstant+AddUser.swift */,
 			);
 			path = TextConstants;
 			sourceTree = "<group>";
@@ -544,8 +544,8 @@
 				629D9F5C252CC23D00945A9F /* InputFormViewController.swift */,
 				629D9F5D252CC23D00945A9F /* ImportFormView.swift */,
 				629D9F5E252CC23D00945A9F /* InputFormViewModel.swift */,
-				622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */,
 				6248820C252F4CFF00677FC3 /* AddUserViewModel.swift */,
+				622F67A1252F09CB00EA7C2A /* EditUserViewModel.swift */,
 				629D9F5F252CC23D00945A9F /* InputFormViewController.xib */,
 			);
 			path = AddOrEditUser;

@@ -109,4 +109,13 @@ class InputView: UIView {
             }
             .disposed(by: self)
     }
+    
+
+    //  force rechek fields end refresh state isValid/isEmpt
+    public func refreshStates() {
+        guard let text = self.text else { return }
+        
+        self.isEmpty.accept(text.isEmpty)
+        self.isValid.accept(validator.check(text: text, with: self.rules) == nil)
+    }
 }

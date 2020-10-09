@@ -11,7 +11,7 @@ import Foundation
 import RxRelay
 
 enum UserListEvent {
-    case showUser(id: String)
+    case showUser(user: UserModel)
     case addUser
     case error(Error)
 }
@@ -24,6 +24,8 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     public let isLoading = BehaviorRelay<Bool>(value: false)
     
     private let networking: Networking
+    
+    private var rowUsers = [UserModel]()
     
     // MARK: - Init and Deinit
     
@@ -51,10 +53,10 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     }
     
     public func showUser(indexPath: IndexPath) {
-        let user = self.users.value.object(at: indexPath.row)
-        
-        if let id = user?.id {
-            self.eventHandler(.showUser(id: id))
+        if let user = self.rowUsers.object(at: indexPath.row) {
+            self.eventHandler(.showUser(user: user))
+        } else {
+            debugPrint("Error: Couldn't find user on index \(indexPath.row)")
         }
     }
     
@@ -67,6 +69,7 @@ class UserListViewModel: BaseViewModel<UserListEvent> {
     private func process(model: [UserModel]) {
         let userViewData = model.map(UserViewData.init(userModel:))
         
+        self.rowUsers = model
         self.users.accept(userViewData)
     }
     
