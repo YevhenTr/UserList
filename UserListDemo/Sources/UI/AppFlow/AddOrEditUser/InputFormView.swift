@@ -135,15 +135,6 @@ class InputFormView: BaseView<InputFormViewModel> {
         let allFieldsNotEmpty = Observable.combineLatest(firstNameNotEmpty, lastNameNotEmpty, emailNotEmpty) { $0 && $1 && $2 }
         let modelChanged = self.isModelChanged
         
-        allFieldsValid.bind {
-            debugPrint("allFieldsValid = \($0)")
-        }
-        allFieldsNotEmpty.bind {
-            debugPrint("allFieldsNotEmpty = \($0)")
-        }
-        modelChanged.bind {
-            debugPrint("modelChanged = \($0)")
-        }
         Observable
             .combineLatest(allFieldsValid, allFieldsNotEmpty, modelChanged) { $0 && $1 && $2 }
             .bind { [weak self] result in
